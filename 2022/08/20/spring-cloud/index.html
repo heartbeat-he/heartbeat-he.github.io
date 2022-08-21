@@ -6,19 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>开发过程 | Hexo</title>
+  <title>spring cloud | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="登录">
+  <meta name="description" content="NACOS概览Nacos 致力于帮助您发现、配置和管理微服务。Nacos 提供了一组简单易用的特性集，帮助您快速实现动态服务注册、服务配置。 开启nacos下载nacos，进入文件中&#x2F;bin目录，在此打开cmd窗口，使用startup.cmd -m standalone命令(开启单机模式，不会报错)。 服务注册介绍将多个模块注册到nacos中，使多个模块可以互相调用。 功能使用1. 添加依赖123">
 <meta property="og:type" content="article">
-<meta property="og:title" content="开发过程">
-<meta property="og:url" content="http://example.com/2022/07/26/%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B/index.html">
+<meta property="og:title" content="spring cloud">
+<meta property="og:url" content="http://example.com/2022/08/20/spring-cloud/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="登录">
+<meta property="og:description" content="NACOS概览Nacos 致力于帮助您发现、配置和管理微服务。Nacos 提供了一组简单易用的特性集，帮助您快速实现动态服务注册、服务配置。 开启nacos下载nacos，进入文件中&#x2F;bin目录，在此打开cmd窗口，使用startup.cmd -m standalone命令(开启单机模式，不会报错)。 服务注册介绍将多个模块注册到nacos中，使多个模块可以互相调用。 功能使用1. 添加依赖123">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-07-26T10:10:56.000Z">
-<meta property="article:modified_time" content="2022-08-12T05:41:26.202Z">
+<meta property="og:image" content="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/20220820195334.png">
+<meta property="article:published_time" content="2022-08-20T11:22:19.000Z">
+<meta property="article:modified_time" content="2022-08-20T12:31:08.759Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/20220820195334.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -144,149 +146,39 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-开发过程" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-spring-cloud" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      开发过程
+      spring cloud
     </h1>
   
 
         
-        <a href="/2022/07/26/%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B/" class="archive-article-date">
-  	<time datetime="2022-07-26T10:10:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-26</time>
+        <a href="/2022/08/20/spring-cloud/" class="archive-article-date">
+  	<time datetime="2022-08-20T11:22:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-08-20</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h2><span id="more"></span>
-
-<p>一：先获取用户输入的密码</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String password = employee.getPassword();</span><br></pre></td></tr></table></figure>
-
-<p>二：将密码进行加密处理</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">password = DigestUtils.md5DigestAsHex(password.getBytes());</span><br></pre></td></tr></table></figure>
-
-<p>三：查询数据库</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LambdaQueryWrapper&lt;Employee&gt; wrapper = <span class="keyword">new</span> LambdaQueryWrapper&lt;&gt;();</span><br></pre></td></tr></table></figure>
-
-<p>四：根据用户输入的名字匹配数据库</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wrapper.eq(Employee::getUsername,employee.getUsername());</span><br></pre></td></tr></table></figure>
-
-<p>五：调用service中继承IService中的方法</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Employee emp = employeeService.getOne(wrapper);</span><br></pre></td></tr></table></figure>
-
-<h3 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h3><p>一：判断数据库中是否能查到</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (emp == <span class="keyword">null</span>)&#123;</span><br><span class="line">           <span class="keyword">return</span> R.error(<span class="string">&quot;未查询到&quot;</span>);</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>
-
-<p>二：密码是否正确</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (!emp.getPassword().equals(password))&#123;</span><br><span class="line">           <span class="keyword">return</span> R.error(<span class="string">&quot;密码错误&quot;</span>);</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>
-
-<p>三：将ID保存在session中</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">request.getSession().setAttribute(<span class="string">&quot;employee&quot;</span>,emp.getId());</span><br><span class="line">        <span class="keyword">return</span> R.success(emp);</span><br></pre></td></tr></table></figure>
+        <h2 id="NACOS"><a href="#NACOS" class="headerlink" title="NACOS"></a>NACOS</h2><h3 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h3><p>Nacos 致力于帮助您发现、配置和管理微服务。Nacos 提供了一组简单易用的特性集，帮助您快速实现动态服务注册、服务配置。</p>
+<h3 id="开启nacos"><a href="#开启nacos" class="headerlink" title="开启nacos"></a>开启nacos</h3><p>下载nacos，进入文件中/bin目录，在此打开cmd窗口，使用<strong>startup.cmd -m standalone</strong>命令(开启单机模式，不会报错)。</p>
+<h3 id="服务注册"><a href="#服务注册" class="headerlink" title="服务注册"></a>服务注册</h3><h4 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h4><p>将多个模块注册到nacos中，使多个模块可以互相调用。</p>
+<h4 id="功能使用"><a href="#功能使用" class="headerlink" title="功能使用"></a>功能使用</h4><h5 id="1-添加依赖"><a href="#1-添加依赖" class="headerlink" title="1. 添加依赖"></a>1. 添加依赖</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;com.alibaba.boot&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;nacos-config-spring-boot-starter&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;$&#123;latest.version&#125;&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">    <span class="comment">//dependencyManagement依赖管理  版本控制</span></span><br><span class="line">    &lt;dependencyManagement&gt;</span><br><span class="line">        &lt;dependencies&gt;</span><br><span class="line">            &lt;dependency&gt;</span><br><span class="line">                &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;</span><br><span class="line">                &lt;artifactId&gt;spring-cloud-dependencies&lt;/artifactId&gt;</span><br><span class="line">                &lt;version&gt;$&#123;spring-cloud.version&#125;&lt;/version&gt;</span><br><span class="line">                &lt;type&gt;pom&lt;/type&gt;</span><br><span class="line">                &lt;scope&gt;<span class="keyword">import</span>&lt;/scope&gt;</span><br><span class="line">            &lt;/dependency&gt;</span><br><span class="line">        &lt;/dependencies&gt;</span><br><span class="line">    &lt;/dependencyManagement&gt;</span><br></pre></td></tr></table></figure>
 
 
 
-<h2 id="退出登录"><a href="#退出登录" class="headerlink" title="退出登录"></a>退出登录</h2><p>清除保存在session中ID</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">request.getSession().removeAttribute(<span class="string">&quot;employee&quot;</span>);</span><br></pre></td></tr></table></figure>
+<h5 id="2-在application-yml中添加配置信息"><a href="#2-在application-yml中添加配置信息" class="headerlink" title="2. 在application.yml中添加配置信息"></a>2. 在application.yml中添加配置信息</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//配置地址</span></span><br><span class="line">spring:</span><br><span class="line">	cloud:</span><br><span class="line">   	  nacos:</span><br><span class="line">      	discovery:</span><br><span class="line">       	 server-addr: <span class="number">192.168</span><span class="number">.1</span><span class="number">.103</span>:<span class="number">8848</span></span><br><span class="line">     <span class="comment">//配置服务名称        </span></span><br><span class="line">     application:</span><br><span class="line">    	name: gulimall-coupon        </span><br></pre></td></tr></table></figure>
 
+<h5 id="3-在启动类中添加注解"><a href="#3-在启动类中添加注解" class="headerlink" title="3.在启动类中添加注解"></a>3.在启动类中添加注解</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@EnableDiscoveryClient</span></span><br></pre></td></tr></table></figure>
 
-
-<h2 id="拦截器"><a href="#拦截器" class="headerlink" title="拦截器"></a>拦截器</h2><p>一：配置拦截器（记得在启动类添加@ServletComponentScan注解）</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WebMvcConfig</span> <span class="keyword">extends</span> <span class="title">WebMvcConfigurationSupport</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">addResourceHandlers</span><span class="params">(ResourceHandlerRegistry registry)</span> </span>&#123;</span><br><span class="line">        registry.addResourceHandler(<span class="string">&quot;/backend/**&quot;</span>).addResourceLocations(<span class="string">&quot;classpath:/backend/&quot;</span>);</span><br><span class="line">        registry.addResourceHandler(<span class="string">&quot;/front/**&quot;</span>).addResourceLocations(<span class="string">&quot;classpath:/front/&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="添加"><a href="#添加" class="headerlink" title="添加"></a>添加</h2><p>直接调用继承方法</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">employeeService.save(employee);</span><br></pre></td></tr></table></figure>
-
-<h3 id="优化-1"><a href="#优化-1" class="headerlink" title="优化"></a>优化</h3><p>用元对象把公共字段拿出来，好处是：每个添加功能时不用每次都employee.setCreateTime</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyBetaObjectHandler</span> <span class="keyword">implements</span> <span class="title">MetaObjectHandler</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">insertFill</span><span class="params">(MetaObject metaObject)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        metaObject.setValue(<span class="string">&quot;createTime&quot;</span>, LocalDateTime.now());</span><br><span class="line">        metaObject.setValue(<span class="string">&quot;updateTime&quot;</span>,LocalDateTime.now());</span><br><span class="line">        metaObject.setValue(<span class="string">&quot;createUser&quot;</span>,BaseContext.getCurrentId());</span><br><span class="line">        metaObject.setValue(<span class="string">&quot;updateUser&quot;</span>,BaseContext.getCurrentId());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">updateFill</span><span class="params">(MetaObject metaObject)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        metaObject.setValue(<span class="string">&quot;updateUser&quot;</span>,BaseContext.getCurrentId());</span><br><span class="line">        metaObject.setValue(<span class="string">&quot;updateTime&quot;</span>,LocalDateTime.now());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="分页"><a href="#分页" class="headerlink" title="分页"></a>分页</h2><p>一：MP配置</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> MybatisPlusInterceptor <span class="title">mybatisPlusInterceptor</span><span class="params">()</span></span>&#123;</span><br><span class="line">        MybatisPlusInterceptor mybatisPlusInterceptor = <span class="keyword">new</span> MybatisPlusInterceptor();</span><br><span class="line">        mybatisPlusInterceptor.addInnerInterceptor(<span class="keyword">new</span> PaginationInnerInterceptor());</span><br><span class="line">        <span class="keyword">return</span> mybatisPlusInterceptor;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-<p>二：根据前端所需要的数据传参数</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> R&lt;Page&gt; <span class="title">page</span><span class="params">(<span class="keyword">int</span> page, <span class="keyword">int</span> pageSize,String name)</span></span>&#123;&#125;</span><br><span class="line">这里的泛型是MP自带的Page</span><br></pre></td></tr></table></figure>
-
-<p>三：创建分页器</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Page page1 = <span class="keyword">new</span> Page()</span><br></pre></td></tr></table></figure>
-
-<p>四：创建分页条件</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">LambdaQueryWrapper&lt;Employee&gt; lambdaQueryWrapper = <span class="keyword">new</span> LambdaQueryWrapper&lt;&gt;();</span><br><span class="line">       lambdaQueryWrapper.like(StringUtils.isNotEmpty(name),Employee::getName,name);</span><br></pre></td></tr></table></figure>
-
-<p>五：执行</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">employeeService.page(page1,lambdaQueryWrapper);</span><br></pre></td></tr></table></figure>
-
-<p>六：排序</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lambdaQueryWrapper.orderByDesc(Employee::getUpdateTime);</span><br></pre></td></tr></table></figure>
-
-<h2 id="编辑信息"><a href="#编辑信息" class="headerlink" title="编辑信息"></a>编辑信息</h2><p>一：先用ID查询</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@GetMapping(&quot;/&#123;id&#125;&quot;)</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> R&lt;Employee&gt; <span class="title">getById</span><span class="params">(<span class="meta">@PathVariable</span> Long id)</span></span>&#123;</span><br><span class="line">       Employee employee = employeeService.getById(id);</span><br><span class="line">       <span class="keyword">return</span> R.success(employee);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-
-<p>二：更新</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">employeeService.updateById(employee);</span><br></pre></td></tr></table></figure>
-
-<h2 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h2><p>根据ID</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@DeleteMapping</span></span><br><span class="line"> <span class="function"><span class="keyword">public</span> R&lt;String&gt; <span class="title">delete</span><span class="params">(Long id)</span></span>&#123;</span><br><span class="line">     employeeService.remove(id);</span><br><span class="line">     <span class="keyword">return</span> R.success(<span class="string">&quot;删除成功&quot;</span>);</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="文件上传"><a href="#文件上传" class="headerlink" title="文件上传"></a>文件上传</h2><p>在application中配置上传路径</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ruiji:</span><br><span class="line">  path: D:\img\</span><br></pre></td></tr></table></figure>
-
-<p>一：利用MultipartFile file（必须是这个）</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@Value(&quot;$&#123;ruiji.path&#125;&quot;)</span><br><span class="line">private String basePath;</span><br></pre></td></tr></table></figure>
-
-<p>先获取原始文件名</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String originalFilename = file.getOriginalFilename();<span class="comment">//fhughrudh.jpg</span></span><br></pre></td></tr></table></figure>
-
-<p>二：截取.jpg后缀名</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String suffix = originalFilename.substring(originalFilename.lastIndexOf(<span class="string">&quot;.&quot;</span>));</span><br></pre></td></tr></table></figure>
-
-<p>三：利用UUID随机生成前缀</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String perfix = UUID.randomUUID().toString();</span><br></pre></td></tr></table></figure>
-
-<p>四：拼接</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String fileName = suffix + perfix;</span><br></pre></td></tr></table></figure>
-
-<p>五：上传到磁盘</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">file.transferTo(<span class="keyword">new</span> File(basePath + fileName));</span><br></pre></td></tr></table></figure>
-
-<h2 id="操作两张表"><a href="#操作两张表" class="headerlink" title="操作两张表"></a>操作两张表</h2><p>一：建立另一个实体类DIshDto(包括dish   dishflavor)</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DishDto</span> <span class="keyword">extends</span> <span class="title">Dish</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> List&lt;DishFlavor&gt; flavors = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="添加-1"><a href="#添加-1" class="headerlink" title="添加"></a>添加</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">saveWithFlavor</span><span class="params">(DishDto dishDto)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">this</span>.save(dishDto);</span><br><span class="line"></span><br><span class="line">        Long dishId = dishDto.getId();</span><br><span class="line"></span><br><span class="line">        List&lt;DishFlavor&gt; flavors = dishDto.getFlavors();</span><br><span class="line">        flavors.stream().map((item) -&gt;&#123;</span><br><span class="line">            item.setDishId(dishId);</span><br><span class="line">            <span class="keyword">return</span> item;</span><br><span class="line">        &#125;).collect(Collectors.toList());</span><br><span class="line"></span><br><span class="line">        dishFlavorService.saveBatch(flavors);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="数据回显"><a href="#数据回显" class="headerlink" title="数据回显"></a>数据回显</h3><p>一：通过ID查询dish类</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dish dish = <span class="keyword">this</span>.getById(id);</span><br></pre></td></tr></table></figure>
-
-<p>二：构造DIshDto对象并把dish数据赋给它</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">DishDto dishDto = <span class="keyword">new</span> DishDto();</span><br><span class="line">BeanUtils.copyProperties(dish,dishDto);</span><br></pre></td></tr></table></figure>
-
-<p>三：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">LambdaQueryWrapper&lt;DishFlavor&gt; queryWrapper = <span class="keyword">new</span> LambdaQueryWrapper&lt;&gt;();</span><br><span class="line">        queryWrapper.eq(DishFlavor::getDishId,dish.getId());</span><br><span class="line">        List&lt;DishFlavor&gt; list = dishFlavorService.list(queryWrapper);</span><br><span class="line">        dishDto.setFlavors(list);</span><br><span class="line">        <span class="keyword">return</span> dishDto;</span><br></pre></td></tr></table></figure>
-
-<h3 id="修改数据"><a href="#修改数据" class="headerlink" title="修改数据"></a>修改数据</h3><p>一：直接修改DishDto表</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.updateById(dishDto);</span><br></pre></td></tr></table></figure>
-
-<p>二：获取Flavors</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">List&lt;DishFlavor&gt; flavors = dishDto.getFlavors();</span><br></pre></td></tr></table></figure>
-
-<p>三：遍历flavors</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">flavors.stream().map((item) -&gt;&#123;</span><br><span class="line">            item.setDishId(dishDto.getId());</span><br><span class="line">            <span class="keyword">return</span> item;</span><br><span class="line">        &#125;).collect(Collectors.toList());</span><br><span class="line">         <span class="comment">//执行</span></span><br><span class="line">        dishFlavorService.saveBatch(flavors);</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
+<h4 id="测试是否注册成功"><a href="#测试是否注册成功" class="headerlink" title="测试是否注册成功"></a>测试是否注册成功</h4><p>输入网址：192.168.1.103:8848/nacos</p>
+<p><img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/20220820195334.png" alt="20220820195334"></p>
 
       
 
@@ -376,7 +268,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/07/26/%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/08/20/spring-cloud/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -390,18 +282,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2022/08/11/EasyExcel%E7%AE%80%E5%8D%95%E5%85%A5%E6%89%8B/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          EasyExcel简单入手
-        
-      </div>
-    </a>
   
-  
-    <a href="/2021/09/30/%E5%89%8D%E7%AB%AF(vue)/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">前端(Vue)</div>
+    <a href="/2022/08/11/EasyExcel%E7%AE%80%E5%8D%95%E5%85%A5%E6%89%8B/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">EasyExcel简单入手</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -428,7 +311,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%99%BB%E5%BD%95"><span class="toc-number">1.</span> <span class="toc-text">登录</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%98%E5%8C%96"><span class="toc-number">1.1.</span> <span class="toc-text">优化</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%80%E5%87%BA%E7%99%BB%E5%BD%95"><span class="toc-number">2.</span> <span class="toc-text">退出登录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8B%A6%E6%88%AA%E5%99%A8"><span class="toc-number">3.</span> <span class="toc-text">拦截器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0"><span class="toc-number">4.</span> <span class="toc-text">添加</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%98%E5%8C%96-1"><span class="toc-number">4.1.</span> <span class="toc-text">优化</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E9%A1%B5"><span class="toc-number">5.</span> <span class="toc-text">分页</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E8%BE%91%E4%BF%A1%E6%81%AF"><span class="toc-number">6.</span> <span class="toc-text">编辑信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%A0%E9%99%A4"><span class="toc-number">7.</span> <span class="toc-text">删除</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0"><span class="toc-number">8.</span> <span class="toc-text">文件上传</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E4%B8%A4%E5%BC%A0%E8%A1%A8"><span class="toc-number">9.</span> <span class="toc-text">操作两张表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0-1"><span class="toc-number">9.1.</span> <span class="toc-text">添加</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%9B%9E%E6%98%BE"><span class="toc-number">9.2.</span> <span class="toc-text">数据回显</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE"><span class="toc-number">9.3.</span> <span class="toc-text">修改数据</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#NACOS"><span class="toc-number">1.</span> <span class="toc-text">NACOS</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A6%82%E8%A7%88"><span class="toc-number">1.1.</span> <span class="toc-text">概览</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E5%90%AFnacos"><span class="toc-number">1.2.</span> <span class="toc-text">开启nacos</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C"><span class="toc-number">1.3.</span> <span class="toc-text">服务注册</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.3.1.</span> <span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8A%9F%E8%83%BD%E4%BD%BF%E7%94%A8"><span class="toc-number">1.3.2.</span> <span class="toc-text">功能使用</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E6%B7%BB%E5%8A%A0%E4%BE%9D%E8%B5%96"><span class="toc-number">1.3.2.1.</span> <span class="toc-text">1. 添加依赖</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E5%9C%A8application-yml%E4%B8%AD%E6%B7%BB%E5%8A%A0%E9%85%8D%E7%BD%AE%E4%BF%A1%E6%81%AF"><span class="toc-number">1.3.2.2.</span> <span class="toc-text">2. 在application.yml中添加配置信息</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-%E5%9C%A8%E5%90%AF%E5%8A%A8%E7%B1%BB%E4%B8%AD%E6%B7%BB%E5%8A%A0%E6%B3%A8%E8%A7%A3"><span class="toc-number">1.3.2.3.</span> <span class="toc-text">3.在启动类中添加注解</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E6%98%AF%E5%90%A6%E6%B3%A8%E5%86%8C%E6%88%90%E5%8A%9F"><span class="toc-number">1.3.3.</span> <span class="toc-text">测试是否注册成功</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
