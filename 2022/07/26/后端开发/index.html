@@ -16,7 +16,7 @@
 <meta property="og:description" content="登录">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-07-26T10:10:56.000Z">
-<meta property="article:modified_time" content="2022-08-26T08:00:44.234Z">
+<meta property="article:modified_time" content="2022-09-21T01:40:49.430Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -222,7 +222,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> R&lt;Page&gt; <span class="title">page</span><span class="params">(<span class="keyword">int</span> page, <span class="keyword">int</span> pageSize,String name)</span></span>&#123;&#125;</span><br><span class="line">这里的泛型是MP自带的Page</span><br></pre></td></tr></table></figure>
 
 <p>三：创建分页器</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Page page1 = <span class="keyword">new</span> Page()</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Page page1 = <span class="keyword">new</span> Page(page,pageSize);</span><br></pre></td></tr></table></figure>
 
 <p>四：创建分页条件</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">LambdaQueryWrapper&lt;Employee&gt; lambdaQueryWrapper = <span class="keyword">new</span> LambdaQueryWrapper&lt;&gt;();</span><br><span class="line">       lambdaQueryWrapper.like(StringUtils.isNotEmpty(name),Employee::getName,name);</span><br></pre></td></tr></table></figure>
