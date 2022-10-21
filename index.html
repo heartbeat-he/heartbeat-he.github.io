@@ -142,6 +142,235 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Java知识" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/10/19/Java%E7%9F%A5%E8%AF%86/">Java知识</a>
+    </h1>
+  
+
+        
+        <a href="/2022/10/19/Java%E7%9F%A5%E8%AF%86/" class="archive-article-date">
+  	<time datetime="2022-10-19T01:45:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-10-19</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="重载与重写的区别"><a href="#重载与重写的区别" class="headerlink" title="重载与重写的区别"></a>重载与重写的区别</h2><h3 id="重载"><a href="#重载" class="headerlink" title="重载"></a>重载</h3><h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><p>1.方法名必须一样以及修饰符，类型都必须一样</p>
+<p>2.形参至少有一个不一样</p>
+<p><img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20221019100449608.png" alt="image-20221019100449608"></p>
+<p>所以第一二个方法构成重载，第三四个构成重载。</p>
+<p>当调用方法时，根据形参的类型调用其中合适的方法。</p>
+<h3 id="重写"><a href="#重写" class="headerlink" title="重写"></a>重写</h3><h4 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h4><p>当父类有一个方法时，我们想调用这个方法，却不想要他方法体内的东西，此时，我们就可以重写父类的这个方法，达到我们自己想要的结果。所以，重写时，参数，方法名称都必须和父类的方法名称，参数一样才能构成重写。</p>
+<h2 id="与equals的区别"><a href="#与equals的区别" class="headerlink" title="==与equals的区别"></a>==与equals的区别</h2><h3 id=""><a href="#" class="headerlink" title="=="></a>==</h3><p>1.当两个对象比较时，比较的是内存地址</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Person p1 = <span class="keyword">new</span> Person();</span><br><span class="line">      Person p2 = <span class="keyword">new</span> Person();</span><br><span class="line">      System.out.println(person1 == person2);<span class="comment">//false`</span></span><br></pre></td></tr></table></figure>
+
+<p>2.当两个基本数据类型时，比较的是值</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a= <span class="number">2</span>;</span><br><span class="line">      <span class="keyword">int</span>(<span class="keyword">double</span>  <span class="keyword">float</span>) b= <span class="number">2</span>;</span><br><span class="line">      System.out.println(a == b);<span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="equals"><a href="#equals" class="headerlink" title="equals"></a>equals</h3><p>是Object类中的方法，只能判断引用类型，默认判断的是地址是否相等，但是，子类往往重写该方法，用于判断内容是否相等，比如</p>
+<p>String，Integer</p>
+<h4 id="被Object类重写的源码"><a href="#被Object类重写的源码" class="headerlink" title="被Object类重写的源码"></a>被Object类重写的源码</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object obj)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (<span class="keyword">this</span> == obj);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>会发现底层也是用的是==  </p>
+<h4 id="被String类重写的源码"><a href="#被String类重写的源码" class="headerlink" title="被String类重写的源码"></a>被String类重写的源码</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object anObject)</span> </span>&#123;</span><br><span class="line">    <span class="comment">//判断是否是对象  是直接就true</span></span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">this</span> == anObject) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="comment">//判断是否是String类型</span></span><br><span class="line">        <span class="keyword">if</span> (anObject <span class="keyword">instanceof</span> String) &#123;</span><br><span class="line">            String anotherString = (String)anObject;</span><br><span class="line">            <span class="keyword">int</span> n = value.length;</span><br><span class="line">            <span class="keyword">if</span> (n == anotherString.value.length) &#123;</span><br><span class="line">                <span class="keyword">char</span> v1[] = value;</span><br><span class="line">                <span class="keyword">char</span> v2[] = anotherString.value;</span><br><span class="line">                <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">while</span> (n-- != <span class="number">0</span>) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (v1[i] != v2[i])</span><br><span class="line">                        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">                    i++;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="被Integer类重写的源码"><a href="#被Integer类重写的源码" class="headerlink" title="被Integer类重写的源码"></a>被Integer类重写的源码</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object obj)</span> </span>&#123;</span><br><span class="line">    <span class="comment">//判断是否是Integer类型，不是直接false</span></span><br><span class="line">        <span class="keyword">if</span> (obj <span class="keyword">instanceof</span> Integer) &#123;</span><br><span class="line">            <span class="keyword">return</span> value == ((Integer)obj).intValue();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="int与Integer的区别"><a href="#int与Integer的区别" class="headerlink" title="int与Integer的区别"></a>int与Integer的区别</h2><p>1.int的默认值是0，Integer的默认值是null</p>
+<p>2.int是基本数据类型，Integer是封装类</p>
+<p>3.因为Integer是一个对象，存储在堆内存中，int基本数据类型，存放在栈内存中</p>
+<p>4.查看Integer的范围</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Integer a =<span class="number">128</span>;</span><br><span class="line">Integer b =<span class="number">128</span>;</span><br><span class="line">System.out.println(a == b);<span class="comment">//false</span></span><br></pre></td></tr></table></figure>
+
+<p>此时我们看Integer的源码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Integer <span class="title">valueOf</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</span><br><span class="line">       <span class="keyword">if</span> (i &gt;= IntegerCache.low &amp;&amp; i &lt;= IntegerCache.high)</span><br><span class="line">           <span class="keyword">return</span> IntegerCache.cache[i + (-IntegerCache.low)];</span><br><span class="line">       <span class="keyword">return</span> <span class="keyword">new</span> Integer(i);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<p>发现，要想判断是否相等，要看i的值是多少，我们在追踪IntegerCache.low IntegerCache.high的值是多少</p>
+<p><img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20221019180350508.png" alt="image-20221019180350508"></p>
+<p>发现是-128~~127，当i的值介于这之间，看源码发现是直接比较这两个值是否相等，当i的值不在这两个值时，会new Integer</p>
+<p>就会比较对象的地址。</p>
+<p>5.为什么会封装成包装类呢，我觉得是因为Java是面向对象语言，一切操作以对象为基础，比如集合里存储元素也只支持Object类型，普通类型是无法通过集合来存储的</p>
+<h2 id="string、stringbuffer与stringbuilder的区别"><a href="#string、stringbuffer与stringbuilder的区别" class="headerlink" title="string、stringbuffer与stringbuilder的区别"></a>string、stringbuffer与stringbuilder的区别</h2><p>1.Stringbuffer和Stringbuilder非常类似，均代表可变字符序列，而且方法一样</p>
+<p>2.String：不可变序列，效率低，但是复用率高</p>
+<p>3.Stringbuffer：可变序列，效率高，线程安全（源码中的方法大多都加了synchronized）</p>
+<p>4.Stringbuilder：可变序列，效率最高，线程不安全</p>
+<p>使用原则：</p>
+<p>1.如果字符串存在大量的修改操作，一般使用Stringbuffer和Stringbuilder</p>
+<p>2.如果字符串存在大量的修改操作，且是单线程情况，使用Stringbuilder</p>
+<p>3.如果字符串存在大量的修改操作，且是多线程情况，使用Stringbuffer</p>
+<p>4.如果字符串存在少量的修改操作，使用String</p>
+<h2 id="Arrays类"><a href="#Arrays类" class="headerlink" title="Arrays类"></a>Arrays类</h2><h3 id="toString-NaN"><a href="#toString-NaN" class="headerlink" title="toString()"></a>toString()</h3><p>打印数组</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Integer[] arr = &#123;-<span class="number">1</span>, <span class="number">5</span>, -<span class="number">2</span>, <span class="number">57</span>, <span class="number">2</span>&#125;;</span><br><span class="line">System.out.println(Arrays.toString(arr));<span class="comment">//[-2, -1, 2, 5, 57]</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="sort"><a href="#sort" class="headerlink" title="sort()"></a>sort()</h3><p>1.可使用默认的排序规则</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Integer[] arr2 = &#123;-<span class="number">5</span>,<span class="number">40</span>,<span class="number">1</span>,<span class="number">5</span>,-<span class="number">3</span>&#125;;</span><br><span class="line">        Arrays.sort(arr2);</span><br><span class="line">        System.out.println(Arrays.toString(arr2));<span class="comment">//[-5, -3, 1, 5, 40]</span></span><br></pre></td></tr></table></figure>
+
+<p>通过看源码发现先调用ComparableTimSort.sort()，再调用binarySort()其实就是二分法进行排序</p>
+<p>2.使用自定义排序规则</p>
+<p>sort有一个重载，通过传入一个借口Comparator实现定制排序</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Integer[] arr = &#123;-<span class="number">1</span>, <span class="number">5</span>, -<span class="number">2</span>, <span class="number">57</span>, <span class="number">2</span>&#125;;</span><br><span class="line">Arrays.sort(arr, <span class="keyword">new</span> Comparator() &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Object o1, Object o2)</span> </span>&#123;</span><br><span class="line">        Integer i1 = (Integer) o1;</span><br><span class="line">        Integer i2 =  (Integer)o2;</span><br><span class="line">        <span class="keyword">return</span> i1-i2;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line">System.out.println(Arrays.toString(arr));<span class="comment">//[-2, -1, 2, 5, 57]</span></span><br></pre></td></tr></table></figure>
+
+<p>此方式实现了Comparator接口的匿名内部类，要求实现compare方法，体现了接口编程的方式，看看源码。</p>
+<p>①<img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20221020182412779.png" alt="image-20221020182412779"></p>
+<p>进入到sort的一个接口参数方法中，会调用TimSort.sort()方法</p>
+<p>②<img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20221020182509828.png" alt="image-20221020182509828"></p>
+<p>进入到binarySort()中</p>
+<p>③最终到此方法中</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> &lt;T&gt; <span class="function"><span class="keyword">void</span> <span class="title">binarySort</span><span class="params">(T[] a, <span class="keyword">int</span> lo, <span class="keyword">int</span> hi, <span class="keyword">int</span> start,</span></span></span><br><span class="line"><span class="params"><span class="function">                                       Comparator&lt;? <span class="keyword">super</span> T&gt; c)</span> </span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>此方法中最核心的代码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> (left &lt; right) &#123;</span><br><span class="line">               <span class="keyword">int</span> mid = (left + right) &gt;&gt;&gt; <span class="number">1</span>;</span><br><span class="line">               <span class="keyword">if</span> (c.compare(pivot, a[mid]) &lt; <span class="number">0</span>)</span><br><span class="line">                   right = mid;</span><br><span class="line">               <span class="keyword">else</span></span><br><span class="line">                   left = mid + <span class="number">1</span>;</span><br><span class="line">           &#125;</span><br></pre></td></tr></table></figure>
+
+<p>发现，c.compare()就是我们重写的方法，此时就会回到我们的方法中</p>
+<h3 id="补充–冒泡排序"><a href="#补充–冒泡排序" class="headerlink" title="补充–冒泡排序"></a>补充–冒泡排序</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] arr = &#123;-<span class="number">3</span>,<span class="number">1</span>,<span class="number">57</span>,<span class="number">3</span>,<span class="number">64</span>,<span class="number">100</span>&#125;;</span><br><span class="line">        mao(arr);</span><br><span class="line">        System.out.println(Arrays.toString(arr));<span class="comment">//[-3, 1, 3, 57, 64, 100]</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span>  <span class="keyword">void</span> <span class="title">mao</span><span class="params">(<span class="keyword">int</span>[] arr)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> temp = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i =<span class="number">0</span> ; i&lt;arr.length - <span class="number">1</span>;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j =<span class="number">0</span> ; j&lt;arr.length - <span class="number">1</span> - i ; j++)&#123;</span><br><span class="line">                <span class="keyword">if</span> (arr[j] &gt; arr[j+<span class="number">1</span>])&#123;</span><br><span class="line">                    temp = arr[j];</span><br><span class="line">                    arr[j] = arr[j+<span class="number">1</span>];</span><br><span class="line">                    arr[j+<span class="number">1</span>] = temp;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><h3 id="Collections"><a href="#Collections" class="headerlink" title="Collections"></a>Collections</h3><p><img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20221021112202730.png" alt="image-20221021112202730"></p>
+<p>进入源码发现，有Collection，Set，List，Map。一个一个的解读</p>
+<p>在解读之前，先画一个他们之间的关系图。</p>
+<img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20221021112427844.png" alt="image-20221021112427844" style="zoom: 67%;" />
+
+<img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20221021112704546.png" alt="image-20221021112704546" style="zoom: 80%;" />
+
+<h4 id="List"><a href="#List" class="headerlink" title="List"></a>List</h4><h5 id="ArrayList的扩容机制"><a href="#ArrayList的扩容机制" class="headerlink" title="ArrayList的扩容机制"></a>ArrayList的扩容机制</h5><h6 id="1-无参扩容"><a href="#1-无参扩容" class="headerlink" title="1.无参扩容"></a>1.无参扩容</h6><p>要知道其中的奥秘，当然要看源码</p>
+<p>当在集合里添加一个数据时，我们看看是怎样进行分配的</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ArrayList arrayList = <span class="keyword">new</span> ArrayList();</span><br><span class="line">        arrayList.add(<span class="string">&quot;jack&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;arrayList = &quot;</span> + arrayList);</span><br></pre></td></tr></table></figure>
+
+<p>①</p>
+<p><img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20221021131721537.png" alt="image-20221021131721537"></p>
+<p><img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20221021121600227.png" alt="image-20221021121600227"></p>
+<p>其实就是给elementData一个空数组</p>
+<p>②</p>
+<p><img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20221021115037794.png" alt="image-20221021115037794"></p>
+<p>当添加第一个值时，minCapacity的值会加1，因为我们添加了一个值，我们继续进入到这个方法中，看他是怎样扩容的。</p>
+<p>③</p>
+<p><img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20221021115946237.png" alt="image-20221021115946237"></p>
+<p>诶，此时发现，DEFAULT_CAPACITY的默认值是10，而Math.max就是返回这两个值的最大值，所以minCapacity就变成了10，这还没有真正的扩容，这个方法还没完，还有个ensureExplicitCapacity()这是一个再次确认是否要扩容的方法。</p>
+<p>④</p>
+<p><img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20221021120335452.png" alt="image-20221021120335452"></p>
+<p>第一步：midCount++，修改次数+1</p>
+<p>第二步：就来到了要真正扩容的方法中</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (minCapacity - elementData.length &gt; <span class="number">0</span>)</span><br><span class="line">            grow(minCapacity);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>minCapacity就是需要的空间，elementData.length就是底层扩容的空间，上面发现elementData是一个空数组，所以就会进入到if语句中，此时就是真正扩容的方法。</p>
+<p>⑤</p>
+<p><img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20221021122352788.png" alt="image-20221021122352788"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">grow</span><span class="params">(<span class="keyword">int</span> minCapacity)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// overflow-conscious code</span></span><br><span class="line">        <span class="keyword">int</span> oldCapacity = elementData.length;<span class="comment">//oldCapacity = 0</span></span><br><span class="line">        <span class="keyword">int</span> newCapacity = oldCapacity + (oldCapacity &gt;&gt; <span class="number">1</span>); <span class="comment">//newCapacity = 0</span></span><br><span class="line">        <span class="keyword">if</span> (newCapacity - minCapacity &lt; <span class="number">0</span>)</span><br><span class="line">            newCapacity = minCapacity;<span class="comment">//newCapacity = 10</span></span><br><span class="line">        <span class="keyword">if</span> (newCapacity - MAX_ARRAY_SIZE &gt; <span class="number">0</span>)<span class="comment">//不会超过MAX_ARRAY_SIZE</span></span><br><span class="line">            newCapacity = hugeCapacity(minCapacity);</span><br><span class="line">        <span class="comment">// minCapacity is usually close to size, so this is a win:</span></span><br><span class="line">        elementData = Arrays.copyOf(elementData, newCapacity);<span class="comment">//发现底层就是用copyOf()</span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>⑥</p>
+<p>就会回到第一步，执行elementData[size++] = e,把jack传给elementData完成集合的添加。</p>
+<p>抛出一个问题，那如果超过10个了呢，那又会怎么样呢？</p>
+<p>那我们继续解读源码。</p>
+<p>此时，我们用循环添加</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ArrayList arrayList = <span class="keyword">new</span> ArrayList();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i =<span class="number">0</span>;i&lt;<span class="number">10</span>;i++)&#123;</span><br><span class="line">            arrayList.add(i);</span><br><span class="line">        &#125;</span><br><span class="line">        arrayList.add(<span class="number">100</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;arrayList = &quot;</span> + arrayList);</span><br></pre></td></tr></table></figure>
+
+<p>①</p>
+<p><img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20221021123901737.png" alt="image-20221021123901737"></p>
+<p>先把int转换成Integer类型</p>
+<p>②和上面的第①一样</p>
+<p>③</p>
+<p><img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20221021124747421.png" alt="image-20221021124747421"></p>
+<p>现在elementData不是空数组，就不会进入到if语句中，来到ensureExplicitCapacity()中</p>
+<p>④</p>
+<p><img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20221021124916374.png" alt="image-20221021124916374"></p>
+<p>之前的for循环都不会进入到if语句中，现在minCapacity = 11 而 elementData.length  = 10 所以就会进行扩容。</p>
+<p>⑤</p>
+<p><img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20221021125211904.png" alt="image-20221021125211904"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">grow</span><span class="params">(<span class="keyword">int</span> minCapacity)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// overflow-conscious code</span></span><br><span class="line">        <span class="keyword">int</span> oldCapacity = elementData.length;<span class="comment">//oldCapacity = 10</span></span><br><span class="line">        <span class="keyword">int</span> newCapacity = oldCapacity + (oldCapacity &gt;&gt; <span class="number">1</span> <span class="comment">// 10 &gt;&gt; 1 = 5);newCapacity  = 15</span></span><br><span class="line">        <span class="keyword">if</span> (newCapacity - minCapacity &lt; <span class="number">0</span>)</span><br><span class="line">            newCapacity = minCapacity;</span><br><span class="line">        <span class="keyword">if</span> (newCapacity - MAX_ARRAY_SIZE &gt; <span class="number">0</span>)</span><br><span class="line">            newCapacity = hugeCapacity(minCapacity);</span><br><span class="line">        <span class="comment">// minCapacity is usually close to size, so this is a win:</span></span><br><span class="line">        elementData = Arrays.copyOf(elementData, newCapacity);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20221021125537061.png" alt="image-20221021125537061" style="zoom:50%;" />
+
+<p>就会发现集合中有15个空间</p>
+<h6 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h6><p>默认的扩容空间是10个，当超过10个时，就会按照1.5倍进行扩容。</p>
+<h6 id="2-有参扩容"><a href="#2-有参扩容" class="headerlink" title="2.有参扩容"></a>2.有参扩容</h6><p><img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20221021131644479.png" alt="image-20221021131644479"></p>
+<p>就是给elementData一个指定空间的数组，其余跟无参构造器一样</p>
+<h5 id="Vector的扩容机制"><a href="#Vector的扩容机制" class="headerlink" title="Vector的扩容机制"></a>Vector的扩容机制</h5><h6 id="1-无参"><a href="#1-无参" class="headerlink" title="1.无参"></a>1.无参</h6><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Vector vector = <span class="keyword">new</span> Vector();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">            vector.add(i);</span><br><span class="line">        &#125;</span><br><span class="line">        vector.add(<span class="number">300</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;vector = &quot;</span> + vector);</span><br></pre></td></tr></table></figure>
+
+<p>①</p>
+<p><img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20221021164837222.png" alt="image-20221021164837222"></p>
+<p>当new Vector()时，就会初始化10个空间</p>
+<p>②</p>
+<p><img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20221021164944223.png" alt="image-20221021164944223"></p>
+<p>此时的方法与ArrayList的方法不一样，我们进入到ensureCapacityHelper()中</p>
+<p>③</p>
+<p><img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20221021165117594.png" alt="image-20221021165117594"></p>
+<p>判断是否需要扩容，因为我们new Vector()时，已经给我们了10个空间，所以并不会进入到grow()中。当我们添加第11个元素时，就会进入到此方法中。</p>
+<p>④</p>
+<p><img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20221021165356834.png" alt="image-20221021165356834"></p>
+<p><img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20221021165507090.png" alt="image-20221021165507090"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">grow</span><span class="params">(<span class="keyword">int</span> minCapacity)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// overflow-conscious code</span></span><br><span class="line">        <span class="keyword">int</span> oldCapacity = elementData.length;<span class="comment">//oldCapacity = 10</span></span><br><span class="line">        <span class="keyword">int</span> newCapacity = oldCapacity + ((capacityIncrement &gt; <span class="number">0</span>) ?</span><br><span class="line">                                         capacityIncrement : oldCapacity);<span class="comment">//newCapacity = 20</span></span><br><span class="line">        <span class="keyword">if</span> (newCapacity - minCapacity &lt; <span class="number">0</span>)</span><br><span class="line">            newCapacity = minCapacity;</span><br><span class="line">        <span class="keyword">if</span> (newCapacity - MAX_ARRAY_SIZE &gt; <span class="number">0</span>)</span><br><span class="line">            newCapacity = hugeCapacity(minCapacity);</span><br><span class="line">        elementData = Arrays.copyOf(elementData, newCapacity);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h6 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h6><p>第一次添加时，Vector会直接给我们10个空间，不需要扩容，当超过10个空间时，才会进行扩容，且扩容的规则的是两倍。</p>
+<h6 id="2-有参"><a href="#2-有参" class="headerlink" title="2.有参"></a>2.有参</h6><p><img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20221021170232867.png" alt="image-20221021170232867"></p>
+<p>通过看源码发现，还可以传两个参数。</p>
+<p><img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20221021170539182.png" alt="image-20221021170539182"></p>
+<p>那第二个参数是什么意思呢？往下看</p>
+<p>测试代码不变，分析源码。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> newCapacity = oldCapacity + ((capacityIncrement &gt; <span class="number">0</span>) ?</span><br><span class="line">                                         capacityIncrement : oldCapacity);<span class="comment">//newCapacity = 10+ 传过来的值</span></span><br></pre></td></tr></table></figure>
+
+<p>上面不传第二个参数时，capcaityIncrement默认为0 ，当你传过来一个值时，就会执行oldCapacity + capacityIncrement，所以第二个参数的意思是，每次扩容的空间就是你指定的值。</p>
+<h5 id="LinkedList底层机制"><a href="#LinkedList底层机制" class="headerlink" title="LinkedList底层机制"></a>LinkedList底层机制</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">LinkedList linkedList = <span class="keyword">new</span> LinkedList();</span><br><span class="line">        linkedList.add(<span class="number">1</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;linkedList = &quot;</span> + linkedList);</span><br></pre></td></tr></table></figure>
+
+<p>①</p>
+<p><img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20221021175900397.png" alt="image-20221021175900397"></p>
+<p>进入到linkLast()中</p>
+<p>②</p>
+<p><img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20221021180001694.png" alt="image-20221021180001694"></p>
+<p>发现LinkedList的添加时利用链表的方式进行的。</p>
+<p><img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20221021182042876.png" alt="image-20221021182042876"></p>
+<p>黑线是第一次添加。红线是第二次添加。</p>
+<h4 id="三者的区别"><a href="#三者的区别" class="headerlink" title="三者的区别"></a>三者的区别</h4><p>ArrayList：可变数组，增删的效率较低，改查的效率较高，通过数组扩容方式添加</p>
+<p>Vector：可变数组，线程安全，效率不高</p>
+<p>LinkedList：双向链表，增删的效率较高，改查的效率较低，通过链表追加的方式添加</p>
+<p>一般来说，大部分情况下会选择ArrayList，都是查询</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/10/19/Java%E7%9F%A5%E8%AF%86/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Spring-Cloud-Alibaba" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
