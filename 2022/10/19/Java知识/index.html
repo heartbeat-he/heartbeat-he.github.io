@@ -8,12 +8,12 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>Java知识 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="重载与重写的区别重载定义1.方法名必须一样以及修饰符，类型都必须一样 2.形参至少有一个不一样  所以第一二个方法构成重载，第三四个构成重载。 当调用方法时，根据形参的类型调用其中合适的方法。 重写定义当父类有一个方法时，我们想调用这个方法，却不想要他方法体内的东西，此时，我们就可以重写父类的这个方法，达到我们自己想要的结果。所以，重写时，参数，方法名称都必须和父类的方法名称，参数一样才能构成重写">
+  <meta name="description" content="重载与重写的区别重载">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java知识">
 <meta property="og:url" content="http://example.com/2022/10/19/Java%E7%9F%A5%E8%AF%86/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="重载与重写的区别重载定义1.方法名必须一样以及修饰符，类型都必须一样 2.形参至少有一个不一样  所以第一二个方法构成重载，第三四个构成重载。 当调用方法时，根据形参的类型调用其中合适的方法。 重写定义当父类有一个方法时，我们想调用这个方法，却不想要他方法体内的东西，此时，我们就可以重写父类的这个方法，达到我们自己想要的结果。所以，重写时，参数，方法名称都必须和父类的方法名称，参数一样才能构成重写">
+<meta property="og:description" content="重载与重写的区别重载">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20221019100449608.png">
 <meta property="og:image" content="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20221019180350508.png">
@@ -45,7 +45,7 @@
 <meta property="og:image" content="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20221021180001694.png">
 <meta property="og:image" content="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20221021182042876.png">
 <meta property="article:published_time" content="2022-10-19T01:45:29.000Z">
-<meta property="article:modified_time" content="2022-10-21T11:32:06.689Z">
+<meta property="article:modified_time" content="2022-10-21T11:34:07.314Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20221019100449608.png">
@@ -194,7 +194,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="重载与重写的区别"><a href="#重载与重写的区别" class="headerlink" title="重载与重写的区别"></a>重载与重写的区别</h2><h3 id="重载"><a href="#重载" class="headerlink" title="重载"></a>重载</h3><h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><p>1.方法名必须一样以及修饰符，类型都必须一样</p>
+        <h2 id="重载与重写的区别"><a href="#重载与重写的区别" class="headerlink" title="重载与重写的区别"></a>重载与重写的区别</h2><h3 id="重载"><a href="#重载" class="headerlink" title="重载"></a>重载</h3><span id="more"></span>
+
+<h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><p>1.方法名必须一样以及修饰符，类型都必须一样</p>
 <p>2.形参至少有一个不一样</p>
 <p><img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20221019100449608.png" alt="image-20221019100449608"></p>
 <p>所以第一二个方法构成重载，第三四个构成重载。</p>
