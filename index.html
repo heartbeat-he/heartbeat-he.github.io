@@ -337,6 +337,91 @@
 
 
   
+    <article id="post-阿里云OSS" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/08/10/%E9%98%BF%E9%87%8C%E4%BA%91OSS/">阿里云OSS</a>
+    </h1>
+  
+
+        
+        <a href="/2022/08/10/%E9%98%BF%E9%87%8C%E4%BA%91OSS/" class="archive-article-date">
+  	<time datetime="2022-08-10T10:12:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-08-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <span id="more"></span>
+
+<h2 id="图片存储"><a href="#图片存储" class="headerlink" title="图片存储"></a>图片存储</h2><p>首先引入依赖</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">           &lt;groupId&gt;com.aliyun.oss&lt;/groupId&gt;</span><br><span class="line">           &lt;artifactId&gt;aliyun-sdk-oss&lt;/artifactId&gt;</span><br><span class="line">           &lt;version&gt;<span class="number">3.15</span><span class="number">.0</span>&lt;/version&gt;</span><br><span class="line">       &lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="配置yml"><a href="#配置yml" class="headerlink" title="配置yml"></a>配置yml</h4><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 阿里云OSS配置</span></span><br><span class="line"><span class="attr">aliyun:</span></span><br><span class="line">  <span class="attr">oss:</span></span><br><span class="line">    <span class="attr">end-point:</span> <span class="string">Endpoint（地域节点）</span></span><br><span class="line">    <span class="attr">access-key-id:</span> <span class="string">access-key-id</span></span><br><span class="line">    <span class="attr">access-key-secret:</span> <span class="string">access-key-secret</span></span><br><span class="line">    <span class="attr">bucket-name:</span> <span class="string">bucket-name</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="读取配置"><a href="#读取配置" class="headerlink" title="读取配置"></a>读取配置</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@ConfigurationProperties(prefix = &quot;aliyun.oss&quot;)</span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">OSSConfig</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String endPoint;</span><br><span class="line">    <span class="keyword">private</span> String accessKeyId;</span><br><span class="line">    <span class="keyword">private</span> String accessKeySecret;</span><br><span class="line">    <span class="keyword">private</span> String bucketName;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="Controller"><a href="#Controller" class="headerlink" title="Controller"></a>Controller</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/upload&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FileUploadController</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> OssService ossService;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@PostMapping</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> ResponseResult <span class="title">uploadOssFile</span><span class="params">(MultipartFile file)</span></span>&#123;</span><br><span class="line">        <span class="comment">//获取上传文件 MultipartFile</span></span><br><span class="line">        <span class="comment">//返回上传到oss的路径</span></span><br><span class="line">        String url =ossService.uploadFileAvatar(file);</span><br><span class="line">        <span class="keyword">return</span> ResponseResult.okResult(url);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="service"><a href="#service" class="headerlink" title="service"></a>service</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">OssService</span> </span>&#123;</span><br><span class="line">    <span class="function">String <span class="title">uploadFileAvatar</span><span class="params">(MultipartFile file)</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="Impl"><a href="#Impl" class="headerlink" title="Impl"></a>Impl</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> com.aliyun.oss.OSS;</span><br><span class="line"><span class="keyword">import</span> com.aliyun.oss.OSSClientBuilder;</span><br><span class="line"><span class="keyword">import</span> com.atguigu.ggkt.vod.service.OssService;</span><br><span class="line"><span class="keyword">import</span> com.atguigu.ggkt.vod.util.ConstantPropertiesUtil;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Service;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.multipart.MultipartFile;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.InputStream;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">OssServiceImpl</span> <span class="keyword">implements</span> <span class="title">OssService</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> OSSConfig ossConfig;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">uploadFileAvatar</span><span class="params">(MultipartFile file)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//获取相关配置</span></span><br><span class="line">        String bucketName = ossConfig.getBucketName();</span><br><span class="line">        String endPoint = ossConfig.getEndPoint();</span><br><span class="line">        String accessKeyId = ossConfig.getAccessKeyId();</span><br><span class="line">        String accessKeySecret = ossConfig.getAccessKeySecret();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//创建OSS对象</span></span><br><span class="line">        OSS ossClient = <span class="keyword">new</span> OSSClientBuilder().build(endPoint, accessKeyId, accessKeySecret);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//获取原生文件名</span></span><br><span class="line">        String originalFilename = file.getOriginalFilename();</span><br><span class="line">        <span class="comment">//JDK8的日期格式</span></span><br><span class="line">        LocalDateTime time = LocalDateTime.now();</span><br><span class="line">        DateTimeFormatter dft = DateTimeFormatter.ofPattern(<span class="string">&quot;yyyy/MM/dd&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//拼装OSS上存储的路径</span></span><br><span class="line">        String folder = dft.format(time);</span><br><span class="line">        String fileName = generateUUID();</span><br><span class="line">        String extension = originalFilename.substring(originalFilename.lastIndexOf(<span class="string">&quot;.&quot;</span>));</span><br><span class="line"></span><br><span class="line">        <span class="comment">//在OSS上bucket下的文件名</span></span><br><span class="line">        String uploadFileName = <span class="string">&quot;user/&quot;</span> + folder + <span class="string">&quot;/&quot;</span> + fileName + extension;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            PutObjectResult result = ossClient.putObject(bucketName, uploadFileName, file.getInputStream());</span><br><span class="line">            <span class="comment">//拼装返回路径</span></span><br><span class="line">            <span class="keyword">if</span> (result != <span class="keyword">null</span>) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="string">&quot;https://&quot;</span>+bucketName+<span class="string">&quot;.&quot;</span>+endPoint+<span class="string">&quot;/&quot;</span>+uploadFileName;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            log.error(<span class="string">&quot;文件上传失败:&#123;&#125;&quot;</span>,e.getMessage());</span><br><span class="line">        &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">            <span class="comment">//OSS关闭服务，不然会造成OOM</span></span><br><span class="line">            ossClient.shutdown();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获取随机字符串</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> String <span class="title">generateUUID</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> UUID.randomUUID().toString().replaceAll(<span class="string">&quot;-&quot;</span>, <span class="string">&quot;&quot;</span>).substring(<span class="number">0</span>, <span class="number">32</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id=""><a href="#" class="headerlink" title=""></a></h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/08/10/%E9%98%BF%E9%87%8C%E4%BA%91OSS/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-后端开发" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -732,72 +817,10 @@
 
 
   
-    <article id="post-博客搭建" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/09/15/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a>
-    </h1>
-  
-
-        
-        <a href="/2021/09/15/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="archive-article-date">
-  	<time datetime="2021-09-15T01:47:55.446Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p> 欢迎来到Hexo !这是你的第一个帖子。查看文档以获得更多信息。如果你在使用Hexo的时候遇到任何问题，你可以在故障排除中找到答案，或者你可以在GitHub上问我。 </p>
-<h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2>
-        
-          <a class="article-more-a" href="/2021/09/15/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/09/15/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
+    </nav>
   
 
 
