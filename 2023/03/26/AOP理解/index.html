@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Hexo</title>
+  <title>AOP理解 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="1. AOP概念及相关术语1.1 AOP概述AOP（Aspect Oriented Programming）是一种设计思想，是软件设计领域中的面向切面编程，它是面向对象编程的一种补充和完善，它以通过预编译方式和运行期动态代理方式实现在不修改源代码的情况下给程序动态统一添加额外功能的一种技术。 1.2 相关术语①横切关注点 从每个方法中抽取出来的同一类非核心业务。在同一个项目中，我们可以使用多个横切">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AOP理解">
+<meta property="og:url" content="http://example.com/2023/03/26/AOP%E7%90%86%E8%A7%A3/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1. AOP概念及相关术语1.1 AOP概述AOP（Aspect Oriented Programming）是一种设计思想，是软件设计领域中的面向切面编程，它是面向对象编程的一种补充和完善，它以通过预编译方式和运行期动态代理方式实现在不修改源代码的情况下给程序动态统一添加额外功能的一种技术。 1.2 相关术语①横切关注点 从每个方法中抽取出来的同一类非核心业务。在同一个项目中，我们可以使用多个横切">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-03-26T06:31:25.000Z">
+<meta property="article:modified_time" content="2023-03-26T08:06:23.234Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -140,16 +144,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-AOP理解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-AOP理解" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/03/26/AOP%E7%90%86%E8%A7%A3/">AOP理解</a>
+    <h1 class="article-title" itemprop="name">
+      AOP理解
     </h1>
   
 
@@ -203,6 +205,37 @@
       
 
       
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/zhifubao.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
     </div>
     <div class="article-info article-info-index">
       
@@ -210,16 +243,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/03/26/AOP%E7%90%86%E8%A7%A3/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2023/03/26/AOP%E7%90%86%E8%A7%A3/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2022/10/19/Java%E7%9F%A5%E8%AF%86/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java知识</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -234,625 +326,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Java知识" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/10/19/Java%E7%9F%A5%E8%AF%86/">Java知识</a>
-    </h1>
-  
-
-        
-        <a href="/2022/10/19/Java%E7%9F%A5%E8%AF%86/" class="archive-article-date">
-  	<time datetime="2022-10-19T01:45:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-10-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="重载与重写的区别"><a href="#重载与重写的区别" class="headerlink" title="重载与重写的区别"></a>重载与重写的区别</h2><h3 id="重载"><a href="#重载" class="headerlink" title="重载"></a>重载</h3>
-        
-          <a class="article-more-a" href="/2022/10/19/Java%E7%9F%A5%E8%AF%86/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/10/19/Java%E7%9F%A5%E8%AF%86/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-AOP%E6%A6%82%E5%BF%B5%E5%8F%8A%E7%9B%B8%E5%85%B3%E6%9C%AF%E8%AF%AD"><span class="toc-number">1.</span> <span class="toc-text">1. AOP概念及相关术语</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-AOP%E6%A6%82%E8%BF%B0"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 AOP概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E7%9B%B8%E5%85%B3%E6%9C%AF%E8%AF%AD"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 相关术语</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E4%BD%9C%E7%94%A8"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 作用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-AOP%E8%BF%90%E7%94%A8"><span class="toc-number">2.</span> <span class="toc-text">2. AOP运用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E4%BE%9D%E8%B5%96"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 依赖</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E5%AE%9A%E4%B9%89%E6%8E%A5%E5%8F%A3"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 定义接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E5%AE%9A%E4%B9%89%E5%AE%9E%E7%8E%B0%E7%B1%BB"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 定义实现类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-%E5%88%9B%E5%BB%BA%E5%88%87%E9%9D%A2%E7%B1%BB"><span class="toc-number">2.4.</span> <span class="toc-text">2.4 创建切面类</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-AOP%E8%BF%90%E7%94%A8%E2%80%93annotation"><span class="toc-number">3.</span> <span class="toc-text">3. AOP运用–annotation</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B3%A8%E8%A7%A3"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 自定义注解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E5%88%87%E9%9D%A2%E7%B1%BB"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 切面类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E5%9C%A8%E6%96%B9%E6%B3%95%E4%B8%8A%E6%B7%BB%E5%8A%A0%E6%B3%A8%E8%A7%A3"><span class="toc-number">3.3.</span> <span class="toc-text">3.3 在方法上添加注解</span></a></li></ol></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
-  
-    <article id="post-Spring-Cloud-Alibaba" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/08/20/Spring-Cloud-Alibaba/">springCloud Alibaba</a>
-    </h1>
-  
-
-        
-        <a href="/2022/08/20/Spring-Cloud-Alibaba/" class="archive-article-date">
-  	<time datetime="2022-08-20T11:22:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-08-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Nacos"><a href="#Nacos" class="headerlink" title="Nacos"></a>Nacos</h2>
-        
-          <a class="article-more-a" href="/2022/08/20/Spring-Cloud-Alibaba/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/08/20/Spring-Cloud-Alibaba/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-EasyExcel简单入手" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/08/11/EasyExcel%E7%AE%80%E5%8D%95%E5%85%A5%E6%89%8B/">EasyExcel简单入手</a>
-    </h1>
-  
-
-        
-        <a href="/2022/08/11/EasyExcel%E7%AE%80%E5%8D%95%E5%85%A5%E6%89%8B/" class="archive-article-date">
-  	<time datetime="2022-08-11T06:45:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-08-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h2>
-        
-          <a class="article-more-a" href="/2022/08/11/EasyExcel%E7%AE%80%E5%8D%95%E5%85%A5%E6%89%8B/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/08/11/EasyExcel%E7%AE%80%E5%8D%95%E5%85%A5%E6%89%8B/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-阿里云OSS" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/08/10/%E9%98%BF%E9%87%8C%E4%BA%91OSS/">阿里云OSS</a>
-    </h1>
-  
-
-        
-        <a href="/2022/08/10/%E9%98%BF%E9%87%8C%E4%BA%91OSS/" class="archive-article-date">
-  	<time datetime="2022-08-10T10:12:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-08-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <span id="more"></span>
-
-<h2 id="图片存储"><a href="#图片存储" class="headerlink" title="图片存储"></a>图片存储</h2><p>首先引入依赖</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">           &lt;groupId&gt;com.aliyun.oss&lt;/groupId&gt;</span><br><span class="line">           &lt;artifactId&gt;aliyun-sdk-oss&lt;/artifactId&gt;</span><br><span class="line">           &lt;version&gt;<span class="number">3.15</span><span class="number">.0</span>&lt;/version&gt;</span><br><span class="line">       &lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
-
-<h4 id="配置yml"><a href="#配置yml" class="headerlink" title="配置yml"></a>配置yml</h4><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 阿里云OSS配置</span></span><br><span class="line"><span class="attr">aliyun:</span></span><br><span class="line">  <span class="attr">oss:</span></span><br><span class="line">    <span class="attr">end-point:</span> <span class="string">Endpoint（地域节点）</span></span><br><span class="line">    <span class="attr">access-key-id:</span> <span class="string">access-key-id</span></span><br><span class="line">    <span class="attr">access-key-secret:</span> <span class="string">access-key-secret</span></span><br><span class="line">    <span class="attr">bucket-name:</span> <span class="string">bucket-name</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="读取配置"><a href="#读取配置" class="headerlink" title="读取配置"></a>读取配置</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@ConfigurationProperties(prefix = &quot;aliyun.oss&quot;)</span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">OSSConfig</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String endPoint;</span><br><span class="line">    <span class="keyword">private</span> String accessKeyId;</span><br><span class="line">    <span class="keyword">private</span> String accessKeySecret;</span><br><span class="line">    <span class="keyword">private</span> String bucketName;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="Controller"><a href="#Controller" class="headerlink" title="Controller"></a>Controller</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/upload&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FileUploadController</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> OssService ossService;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@PostMapping</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> ResponseResult <span class="title">uploadOssFile</span><span class="params">(MultipartFile file)</span></span>&#123;</span><br><span class="line">        <span class="comment">//获取上传文件 MultipartFile</span></span><br><span class="line">        <span class="comment">//返回上传到oss的路径</span></span><br><span class="line">        String url =ossService.uploadFileAvatar(file);</span><br><span class="line">        <span class="keyword">return</span> ResponseResult.okResult(url);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="service"><a href="#service" class="headerlink" title="service"></a>service</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">OssService</span> </span>&#123;</span><br><span class="line">    <span class="function">String <span class="title">uploadFileAvatar</span><span class="params">(MultipartFile file)</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h4 id="Impl"><a href="#Impl" class="headerlink" title="Impl"></a>Impl</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> com.aliyun.oss.OSS;</span><br><span class="line"><span class="keyword">import</span> com.aliyun.oss.OSSClientBuilder;</span><br><span class="line"><span class="keyword">import</span> com.atguigu.ggkt.vod.service.OssService;</span><br><span class="line"><span class="keyword">import</span> com.atguigu.ggkt.vod.util.ConstantPropertiesUtil;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Service;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.multipart.MultipartFile;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.InputStream;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">OssServiceImpl</span> <span class="keyword">implements</span> <span class="title">OssService</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> OSSConfig ossConfig;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">uploadFileAvatar</span><span class="params">(MultipartFile file)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//获取相关配置</span></span><br><span class="line">        String bucketName = ossConfig.getBucketName();</span><br><span class="line">        String endPoint = ossConfig.getEndPoint();</span><br><span class="line">        String accessKeyId = ossConfig.getAccessKeyId();</span><br><span class="line">        String accessKeySecret = ossConfig.getAccessKeySecret();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//创建OSS对象</span></span><br><span class="line">        OSS ossClient = <span class="keyword">new</span> OSSClientBuilder().build(endPoint, accessKeyId, accessKeySecret);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//获取原生文件名</span></span><br><span class="line">        String originalFilename = file.getOriginalFilename();</span><br><span class="line">        <span class="comment">//JDK8的日期格式</span></span><br><span class="line">        LocalDateTime time = LocalDateTime.now();</span><br><span class="line">        DateTimeFormatter dft = DateTimeFormatter.ofPattern(<span class="string">&quot;yyyy/MM/dd&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//拼装OSS上存储的路径</span></span><br><span class="line">        String folder = dft.format(time);</span><br><span class="line">        String fileName = generateUUID();</span><br><span class="line">        String extension = originalFilename.substring(originalFilename.lastIndexOf(<span class="string">&quot;.&quot;</span>));</span><br><span class="line"></span><br><span class="line">        <span class="comment">//在OSS上bucket下的文件名</span></span><br><span class="line">        String uploadFileName = <span class="string">&quot;user/&quot;</span> + folder + <span class="string">&quot;/&quot;</span> + fileName + extension;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            PutObjectResult result = ossClient.putObject(bucketName, uploadFileName, file.getInputStream());</span><br><span class="line">            <span class="comment">//拼装返回路径</span></span><br><span class="line">            <span class="keyword">if</span> (result != <span class="keyword">null</span>) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="string">&quot;https://&quot;</span>+bucketName+<span class="string">&quot;.&quot;</span>+endPoint+<span class="string">&quot;/&quot;</span>+uploadFileName;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            log.error(<span class="string">&quot;文件上传失败:&#123;&#125;&quot;</span>,e.getMessage());</span><br><span class="line">        &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">            <span class="comment">//OSS关闭服务，不然会造成OOM</span></span><br><span class="line">            ossClient.shutdown();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获取随机字符串</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> String <span class="title">generateUUID</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> UUID.randomUUID().toString().replaceAll(<span class="string">&quot;-&quot;</span>, <span class="string">&quot;&quot;</span>).substring(<span class="number">0</span>, <span class="number">32</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/08/10/%E9%98%BF%E9%87%8C%E4%BA%91OSS/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-后端开发" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/07/26/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/">后端开发</a>
-    </h1>
-  
-
-        
-        <a href="/2022/07/26/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/" class="archive-article-date">
-  	<time datetime="2022-07-26T10:10:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h2>
-        
-          <a class="article-more-a" href="/2022/07/26/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/07/26/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-前端(vue)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/09/30/%E5%89%8D%E7%AB%AF(vue)/">前端(Vue)</a>
-    </h1>
-  
-
-        
-        <a href="/2021/09/30/%E5%89%8D%E7%AB%AF(vue)/" class="archive-article-date">
-  	<time datetime="2021-09-30T11:28:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="Vue介绍"><a href="#Vue介绍" class="headerlink" title="Vue介绍"></a>Vue介绍</h3><p>官网:<a target="_blank" rel="noopener" href="https://cn.vuejs.org/">https://cn.vuejs.org</a></p>
-<p>Vue 的核心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。另一方面，当与现代化的工具链以及各种支持类库结合使用时，Vue 也完全能够为复杂的单页应用提供驱动</p>
-<h4 id="初始Vue-js"><a href="#初始Vue-js" class="headerlink" title="初始Vue.js"></a>初始Vue.js</h4>
-        
-          <a class="article-more-a" href="/2021/09/30/%E5%89%8D%E7%AB%AF(vue)/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/09/30/%E5%89%8D%E7%AB%AF(vue)/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-前端(ECMAScript 6)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/09/30/%E5%89%8D%E7%AB%AF(ECMAScript%206)/">前端(ECMAScript 6)</a>
-    </h1>
-  
-
-        
-        <a href="/2021/09/30/%E5%89%8D%E7%AB%AF(ECMAScript%206)/" class="archive-article-date">
-  	<time datetime="2021-09-30T10:55:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="ECMAScript-6简介"><a href="#ECMAScript-6简介" class="headerlink" title="ECMAScript 6简介"></a>ECMAScript 6简介</h4><p>官网：<a target="_blank" rel="noopener" href="http://es6.ruanyifeng.com/">http://es6.ruanyifeng.com/</a></p>
-<p>es6就是一种标准，js就是实现这种标准，es6就是接口，js实现接口</p>
-        
-          <a class="article-more-a" href="/2021/09/30/%E5%89%8D%E7%AB%AF(ECMAScript%206)/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/09/30/%E5%89%8D%E7%AB%AF(ECMAScript%206)/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-认识Swagger" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/09/28/%E8%AE%A4%E8%AF%86Swagger/">认识Swagger</a>
-    </h1>
-  
-
-        
-        <a href="/2021/09/28/%E8%AE%A4%E8%AF%86Swagger/" class="archive-article-date">
-  	<time datetime="2021-09-28T01:07:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="Swagger介绍"><a href="#Swagger介绍" class="headerlink" title="Swagger介绍"></a>Swagger介绍</h3><p>官网:<a target="_blank" rel="noopener" href="https://swagger.io/">https://swagger.io/</a></p>
-<p>Swagger是一款在线接口文档测试（可测试，可查看接口文档）</p>
-<h3 id="Swagger使用"><a href="#Swagger使用" class="headerlink" title="Swagger使用"></a>Swagger使用</h3>
-        
-          <a class="article-more-a" href="/2021/09/28/%E8%AE%A4%E8%AF%86Swagger/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/09/28/%E8%AE%A4%E8%AF%86Swagger/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-mybatis与mybatis-plus" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/09/24/mybatis%E4%B8%8Emybatis-plus/">mybatis与mybatis-plus</a>
-    </h1>
-  
-
-        
-        <a href="/2021/09/24/mybatis%E4%B8%8Emybatis-plus/" class="archive-article-date">
-  	<time datetime="2021-09-24T11:43:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="mybatis"><a href="#mybatis" class="headerlink" title="mybatis"></a>mybatis</h4>
-        
-          <a class="article-more-a" href="/2021/09/24/mybatis%E4%B8%8Emybatis-plus/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/09/24/mybatis%E4%B8%8Emybatis-plus/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -875,8 +374,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
