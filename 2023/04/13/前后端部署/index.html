@@ -6,15 +6,60 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Hexo</title>
+  <title>前后端部署 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="命令行部署服务器">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前后端部署">
+<meta property="og:url" content="http://example.com/2023/04/13/%E5%89%8D%E5%90%8E%E7%AB%AF%E9%83%A8%E7%BD%B2/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="命令行部署服务器">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230413163346796.png">
+<meta property="og:image" content="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230413163905933.png">
+<meta property="og:image" content="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230413164223772.png">
+<meta property="og:image" content="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230413164858125.png">
+<meta property="og:image" content="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230413170319770.png">
+<meta property="og:image" content="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230413171026670.png">
+<meta property="og:image" content="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230413171040082.png">
+<meta property="og:image" content="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230413171410664.png">
+<meta property="og:image" content="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230413185739640.png">
+<meta property="og:image" content="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230413192538941.png">
+<meta property="og:image" content="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230413200429775.png">
+<meta property="og:image" content="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230413200516572.png">
+<meta property="og:image" content="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230413195423063.png">
+<meta property="og:image" content="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230413201936481.png">
+<meta property="og:image" content="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230413201431012.png">
+<meta property="og:image" content="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230413202029397.png">
+<meta property="og:image" content="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230413202240236.png">
+<meta property="og:image" content="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230413202308458.png">
+<meta property="og:image" content="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230413202641756.png">
+<meta property="og:image" content="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230413203015663.png">
+<meta property="og:image" content="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230414084532065.png">
+<meta property="og:image" content="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230414085630293.png">
+<meta property="og:image" content="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230414090910292.png">
+<meta property="og:image" content="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230414091421210.png">
+<meta property="og:image" content="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230414092056855.png">
+<meta property="og:image" content="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230414092112290.png">
+<meta property="og:image" content="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230414092128555.png">
+<meta property="og:image" content="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230414092603582.png">
+<meta property="og:image" content="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230414092747461.png">
+<meta property="og:image" content="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230414092916057.png">
+<meta property="og:image" content="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230414093123401.png">
+<meta property="og:image" content="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230414093252848.png">
+<meta property="og:image" content="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230414093621896.png">
+<meta property="og:image" content="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230414094854610.png">
+<meta property="og:image" content="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230414095107841.png">
+<meta property="og:image" content="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230414095122259.png">
+<meta property="og:image" content="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230414095413989.png">
+<meta property="og:image" content="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230414095525266.png">
+<meta property="og:image" content="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230414104236146.png">
+<meta property="og:image" content="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230414104337133.png">
+<meta property="article:published_time" content="2023-04-13T08:18:05.000Z">
+<meta property="article:modified_time" content="2023-04-14T02:45:46.400Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230413163346796.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -140,16 +185,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-前后端部署" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-前后端部署" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/04/13/%E5%89%8D%E5%90%8E%E7%AB%AF%E9%83%A8%E7%BD%B2/">前后端部署</a>
+    <h1 class="article-title" itemprop="name">
+      前后端部署
     </h1>
   
 
@@ -162,12 +205,284 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="命令行部署"><a href="#命令行部署" class="headerlink" title="命令行部署"></a>命令行部署</h1><h2 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h2>
-        
-          <a class="article-more-a" href="/2023/04/13/%E5%89%8D%E5%90%8E%E7%AB%AF%E9%83%A8%E7%BD%B2/#more">more >></a>
-        
+        <h1 id="命令行部署"><a href="#命令行部署" class="headerlink" title="命令行部署"></a>命令行部署</h1><h2 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h2><span id="more"></span>
+
+<h3 id="阿里云"><a href="#阿里云" class="headerlink" title="阿里云"></a>阿里云</h3><p>官网:<a target="_blank" rel="noopener" href="https://www.aliyun.com/">https://www.aliyun.com/</a></p>
+<h4 id="1-购买服务器"><a href="#1-购买服务器" class="headerlink" title="1.购买服务器"></a>1.购买服务器</h4><p>选择以下选项即可</p>
+<img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230413163346796.png" alt="image-20230413163346796" style="zoom: 33%;" />
+
+<h4 id="2-远程连接"><a href="#2-远程连接" class="headerlink" title="2.远程连接"></a>2.远程连接</h4><p>记住这个公网IP，以后全是用它，远程连接好像是要设置密码，如果忘了密码可以在后面三个点修改</p>
+<p><img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230413163905933.png" alt="image-20230413163905933"></p>
+<img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230413164223772.png" alt="image-20230413164223772" style="zoom:50%;" />
+
+<h4 id="3-开放端口"><a href="#3-开放端口" class="headerlink" title="3.开放端口"></a>3.开放端口</h4><p>先介绍这里，后面的端口有需要再这里开</p>
+<img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230413164858125.png" alt="image-20230413164858125" style="zoom:50%;" />
+
+<h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>更换服务器的阿里yum源</p>
+<p>1.备份原有yum源</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /etc/yum.repos.d/</span><br><span class="line">mkdir repo_bak</span><br><span class="line">mv *.repo repo_bak/</span><br></pre></td></tr></table></figure>
+
+<p>2.下载阿里yum源</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -O /etc/yum.repos.d/CentOS-Base.repo http:<span class="comment">//mirrors.aliyun.com/repo/Centos-7.repo</span></span><br></pre></td></tr></table></figure>
+
+<p>3.清理yum缓存，重建缓存</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum clean all</span><br><span class="line">yum makecache</span><br></pre></td></tr></table></figure>
+
+<p>4.安装epel-release(我们在Centos下使用yum安装时往往找不到rpm的情况，官方的rpm repository提供的rpm包也不够丰富，很多时候需要自己编译很痛苦，而EPEL恰恰可以解决这两方面的问题。EPEL的全称叫 Extra Packages for Enterprise Linux 。EPEL是由 Fedora 社区打造，为 RHEL 及衍生发行版如 CentOS、Scientific Linux 等提供高质量软件包的项目。装上了 EPEL之后，就相当于添加了一个第三方源)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>查看是否存在</span><br><span class="line">yum list | grep epel-release</span><br><span class="line"><span class="number">2.</span>安装</span><br><span class="line">yum install -y epel-release</span><br></pre></td></tr></table></figure>
+
+<p>5.重置yum缓存</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum clean all</span><br><span class="line">yum makecache</span><br></pre></td></tr></table></figure>
+
+<p>6.查看yum源信息</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">查看已启用 yum repolist enabled</span><br><span class="line">查看所有 yum repolist all</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-jdk安装"><a href="#1-jdk安装" class="headerlink" title="1.jdk安装"></a>1.jdk安装</h3><p>下载:链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/14Jn35W-b5wBiXu8ZHNi2BA?pwd=enwv">https://pan.baidu.com/s/14Jn35W-b5wBiXu8ZHNi2BA?pwd=enwv</a><br>提取码：enwv</p>
+<p>1.1 将文件传输到服务器中</p>
+<img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230413170319770.png" alt="image-20230413170319770" style="zoom:50%;" />
+
+<p>1.2 在/usr/local目录下解压文件</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xzvf jdk-8u271-linux-x64.tar.gz</span><br></pre></td></tr></table></figure>
+
+<p>1.3 配置环境变量。</p>
+<p>进入到根目录下的/etc，用vim编辑器在 profile 文件中添加四个变量</p>
+<p><img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230413171026670.png" alt="image-20230413171026670"></p>
+<p><img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230413171040082.png" alt="image-20230413171040082"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/usr/local/jdk1<span class="number">.8</span><span class="number">.0_271</span></span><br><span class="line">export JRE_HOME=$JAVA_HOME/jre</span><br><span class="line">export CLASSPATH=.:$JAVA_HOME/lib:$JRE_HOME/lib</span><br><span class="line">export PATH=/bin:/usr/bin:$PATH:$JAVA_HOME/bin:$PATH</span><br></pre></td></tr></table></figure>
+
+<p>1.4 刷新配置</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure>
+
+<p>1.5 查看是否安装</p>
+<p><img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230413171410664.png" alt="image-20230413171410664"></p>
+<h3 id="2-mysql安装"><a href="#2-mysql安装" class="headerlink" title="2.mysql安装"></a>2.mysql安装</h3><p>2.1 开启3306端口</p>
+<p><img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230413185739640.png" alt="image-20230413185739640"></p>
+<p>2.2 下载mysql:链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1PdhAkrk6H554eJswvfFKhA?pwd=1an2">https://pan.baidu.com/s/1PdhAkrk6H554eJswvfFKhA?pwd=1an2</a><br>提取码：1an2</p>
+<p>2.3 将文件传输到服务器中</p>
+<img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230413192538941.png" alt="image-20230413192538941" style="zoom: 50%;" />
+
+<p>2.4 在/usr/local目录下解压文件</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf  mysql-<span class="number">5.7</span><span class="number">.35</span>-linux-glibc2<span class="number">.12</span>-x86_64.tar.gz</span><br></pre></td></tr></table></figure>
+
+<p>2.4 修改名称将目录名称直接修改为mysql</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv mysql-<span class="number">5.7</span><span class="number">.35</span>-linux-glibc2<span class="number">.12</span>-x86_64  mysql</span><br></pre></td></tr></table></figure>
+
+<img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230413200429775.png" alt="image-20230413200429775" style="zoom:67%;" />
+
+<p>2.5 进入mysql</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd mysql</span><br></pre></td></tr></table></figure>
+
+<p>2.6 创建数据目录</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir data</span><br></pre></td></tr></table></figure>
+
+<p>2.7 给数据目录赋权限：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod -R <span class="number">777</span> /usr/local/mysql/data</span><br></pre></td></tr></table></figure>
+
+<img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230413200516572.png" alt="image-20230413200516572" style="zoom:67%;" />
+
+<p>2.8  创建用户 、组、并将用户加入组,修改配置文件</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">groupadd mysql</span><br><span class="line">useradd -g mysql mysql</span><br></pre></td></tr></table></figure>
+
+<p>2.9 修改MySQL 配置文件： vi /etc/my.cnf </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[mysqld]</span><br><span class="line">bind-address=<span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span></span><br><span class="line">port=<span class="number">3306</span></span><br><span class="line">user=mysql</span><br><span class="line">basedir=/usr/local/mysql</span><br><span class="line">datadir=/usr/local/mysql/data</span><br><span class="line">socket=/tmp/mysql.sock</span><br><span class="line">log-error=/usr/local/mysql/data/mysql.err</span><br><span class="line">pid-file=/usr/local/mysql/data/mysql.pid</span><br><span class="line">#character config</span><br><span class="line">character_set_server=utf8mb4</span><br><span class="line">symbolic-links=<span class="number">0</span></span><br><span class="line">explicit_defaults_for_timestamp=<span class="keyword">true</span></span><br></pre></td></tr></table></figure>
+
+<p>2.10 进入mysql bin 目录下面</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd bin</span><br></pre></td></tr></table></figure>
+
+<p> 2.11 执行命令</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./mysqld --initialize --user=mysql --datadir=/usr/local/mysql/data/ --basedir=/usr/local/mysql/</span><br></pre></td></tr></table></figure>
+
+<p>2.12  执行这一句命令有可能报错：<br>./mysqld: error while loading shared libraries: libnuma.so.1: cannot open shared object file: No such file or directory是因为没有安装依赖  libaio</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum -y install libaio-devel.x86_64</span><br><span class="line">yum -y install numactl</span><br></pre></td></tr></table></figure>
+
+<p>记得保存密码</p>
+<p><img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230413195423063.png" alt="image-20230413195423063"></p>
+<p>2.13  启动服务</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/mysql/support-files/mysql.server start</span><br></pre></td></tr></table></figure>
+
+<p>2.14  添加mysql 软连接并重启mysql服务。(在mysql目录下)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ln -s /usr/local/mysql/support-files/mysql.server /etc/init.d/mysql </span><br><span class="line">ln -s /usr/local/mysql/bin/mysql /usr/bin/mysql</span><br><span class="line">service mysql restart</span><br></pre></td></tr></table></figure>
+
+<p>2.15  登录mysql ,并修改你的初始密码！（密码为上面生成的临时密码）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure>
+
+<p>2.16  复制下面的命令修改密码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set password <span class="keyword">for</span> root<span class="meta">@localhost</span> = password(<span class="string">&#x27;root&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>2.17  远程连接</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">use mysql;</span><br><span class="line">update user set user.Host=<span class="string">&#x27;%&#x27;</span> where user.User=<span class="string">&#x27;root&#x27;</span>;</span><br><span class="line">flush privileges;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-redis安装"><a href="#3-redis安装" class="headerlink" title="3.redis安装"></a>3.redis安装</h3><p>3.1 开放端口</p>
+<p><img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230413201936481.png" alt="image-20230413201936481"></p>
+<p>3.2 下载：链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1Rjpu2p8Cqn1ZcJGMypBVKw?pwd=fro4">https://pan.baidu.com/s/1Rjpu2p8Cqn1ZcJGMypBVKw?pwd=fro4</a><br>提取码：fro4</p>
+<p>3.3  将文件传输到服务器中</p>
+<img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230413201431012.png" alt="image-20230413201431012" style="zoom:50%;" />
+
+<p>3.4 解压</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xzvf redis-<span class="number">5.0</span><span class="number">.5</span>.tar.gz</span><br></pre></td></tr></table></figure>
+
+<p>3.5 进入解压后的文件目录使用make命令进行编译</p>
+<img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230413202029397.png" alt="image-20230413202029397" style="zoom:67%;" />
+
+<p>3.6 进入src文件执行make install安装redis</p>
+<img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230413202240236.png" alt="image-20230413202240236" style="zoom:67%;" />
+
+<img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230413202308458.png" alt="image-20230413202308458" style="zoom:50%;" />
+
+<p>3.7 在src目录执行./redis-server  ../redis.conf即可启动redis</p>
+<p>3.8 修改redis配置文件</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi redis.conf</span><br></pre></td></tr></table></figure>
+
+<p>3.8.1 找到bind 127.0.0.1并将其注释</p>
+<p>使用”/ 要搜索的内容”，回车，直接快速定位文档中的位置</p>
+<img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230413202641756.png" alt="image-20230413202641756" style="zoom:67%;" />
+
+<p>3.8.2 修改保护模式，不修改保护模式也是只能内网访问的 protected-mode yes 改成 protected-mode no</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">protected</span>-mode no</span><br></pre></td></tr></table></figure>
+
+<p>3.8.3 daemonize no 改为yes 后台一直运行</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">daemonize yes</span><br></pre></td></tr></table></figure>
+
+<p>// 设置密码，这里建议设置密码，否则可能会发生一些预料不到的事情，因为6379端口有漏洞</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">requirepass <span class="string">&quot;root&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>最后在启动redis就可以远程连接redis了（在src目录执行./redis-server …/redis.conf即可启动redis）</p>
+<h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><p>当这样就启动后端服务的话，有可能报错</p>
+<img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230413203015663.png" alt="image-20230413203015663" style="zoom:67%;" />
+
+<p>解决</p>
+<p>先进入Redis服务器</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis-cli.exe</span><br></pre></td></tr></table></figure>
+
+<p>查看是否设置了密码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span>&gt; auth root</span><br></pre></td></tr></table></figure>
+
+<p>(error) ERR Client sent AUTH, but no password is set<br>报错，说明没有设置密码，然后再执行配置命令</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span>&gt; config set requirepass root</span><br><span class="line">OK</span><br></pre></td></tr></table></figure>
+
+<p>返回OK后即代表配置成功，这个时候再执行查看密码命令</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">redis <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span>&gt; AUTH root</span><br><span class="line">Ok</span><br></pre></td></tr></table></figure>
+
+
+<p>返回OK，就说明已经成功了</p>
+<h3 id="4-nginx安装"><a href="#4-nginx安装" class="headerlink" title="4. nginx安装"></a>4. nginx安装</h3><p>4.1 安装 链接: <a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1Xp2v_4dAmQ4LFkpkVRKftw?pwd=r9y4">https://pan.baidu.com/s/1Xp2v_4dAmQ4LFkpkVRKftw?pwd=r9y4</a> 提取码: r9y4 </p>
+<p>4.2 打开端口 </p>
+<p><img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230414084532065.png" alt="image-20230414084532065"></p>
+<p>4.3 将文件传入到服务器中并解压</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xzvf nginx-<span class="number">1.18</span><span class="number">.0</span>.tar.gz</span><br></pre></td></tr></table></figure>
+
+<p>4.4 进入到nginx目录中</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd nginx</span><br></pre></td></tr></table></figure>
+
+<p>4.5源码编译安装</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure</span><br></pre></td></tr></table></figure>
+
+<p> 4.6 执行make命令</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make</span><br></pre></td></tr></table></figure>
+
+<p> 4.7  执行make install命令</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make install</span><br></pre></td></tr></table></figure>
+
+<p>4.8 启动nginx，在/usr/local/nginx/sbin</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./nginx</span><br></pre></td></tr></table></figure>
+
+<p>在浏览器输入公网IP</p>
+<img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230414085630293.png" alt="image-20230414085630293" style="zoom:50%;" />
+
+<p>即安装成功</p>
+<h2 id="后端部署"><a href="#后端部署" class="headerlink" title="后端部署"></a>后端部署</h2><h3 id="1-修改配置"><a href="#1-修改配置" class="headerlink" title="1.修改配置"></a>1.修改配置</h3><p>数据库的IP，redis的IP</p>
+<img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230414090910292.png" alt="image-20230414090910292" style="zoom:67%;" />
+
+<h3 id="2-添加pom"><a href="#2-添加pom" class="headerlink" title="2.添加pom"></a>2.添加pom</h3><img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230414091421210.png" alt="image-20230414091421210" style="zoom:50%;" />
+
+<p>讲解一下这几个model</p>
+<p>sangeng-admin：后台的代码,含有启动类</p>
+<p>sangeng-blog：前台的代码，含有启动类</p>
+<p>sangeng-framework：公共代码，不含启动类</p>
+<p><img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230414092056855.png" alt="image-20230414092056855" style="zoom:50%;" /><img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230414092112290.png" alt="image-20230414092112290" style="zoom:50%;" /><img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230414092128555.png" alt="image-20230414092128555" style="zoom:50%;" /></p>
+<p>2.1只需要在含有启动类上的model上在才添加打包依赖</p>
+<p>在主目录下：SGBlog</p>
+<img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230414092603582.png" alt="image-20230414092603582" style="zoom: 67%;" />
+
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">build</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.maven.plugins<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>maven-compiler-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">source</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">source</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">target</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">target</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">encoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">encoding</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line"></span><br><span class="line">            <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.maven.plugins<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>maven-surefire-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.19.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">skipTests</span>&gt;</span>true<span class="tag">&lt;/<span class="name">skipTests</span>&gt;</span>  <span class="comment">&lt;!--默认关掉单元测试 --&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">build</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>在admin下的pom.xml中</p>
+<img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230414092747461.png" alt="image-20230414092747461" style="zoom: 50%;" />
+
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">build</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.1.1.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">                   <span class="tag">&lt;<span class="name">mainClass</span>&gt;</span>com.sangeng.BlogAdminApplication<span class="tag">&lt;/<span class="name">mainClass</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">executions</span>&gt;</span></span><br><span class="line">                   <span class="tag">&lt;<span class="name">execution</span>&gt;</span></span><br><span class="line">                       <span class="tag">&lt;<span class="name">goals</span>&gt;</span></span><br><span class="line">                           <span class="tag">&lt;<span class="name">goal</span>&gt;</span>repackage<span class="tag">&lt;/<span class="name">goal</span>&gt;</span></span><br><span class="line">                       <span class="tag">&lt;/<span class="name">goals</span>&gt;</span></span><br><span class="line">                   <span class="tag">&lt;/<span class="name">execution</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;/<span class="name">executions</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">build</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>在blog的pom.xml中</p>
+<img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230414092916057.png" alt="image-20230414092916057" style="zoom:50%;" />
+
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">build</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.1.1.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">mainClass</span>&gt;</span>com.sangeng.SanGengBlogApplication<span class="tag">&lt;/<span class="name">mainClass</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">executions</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">execution</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">goals</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">goal</span>&gt;</span>repackage<span class="tag">&lt;/<span class="name">goal</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;/<span class="name">goals</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">execution</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">executions</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">build</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="3-打包"><a href="#3-打包" class="headerlink" title="3.打包"></a>3.打包</h3><img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230414093123401.png" alt="image-20230414093123401" style="zoom:50%;" />
+
+<h3 id="4-生成jar包"><a href="#4-生成jar包" class="headerlink" title="4.生成jar包"></a>4.生成jar包</h3><p>在文件夹中的target中有杠杆生成的jar包</p>
+<img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230414093252848.png" alt="image-20230414093252848" style="zoom:50%;" />
+
+<p>在把第三步的步骤重复一遍生成blog的jar包</p>
+<h3 id="5-jar包上传到服务器"><a href="#5-jar包上传到服务器" class="headerlink" title="5.jar包上传到服务器"></a>5.jar包上传到服务器</h3><p>5.1  在服务器下的usr下创建一个server文件夹放jar包</p>
+<img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230414093621896.png" alt="image-20230414093621896" style="zoom:50%;" />
+
+<p>把刚刚的jar包上传到这里即可</p>
+<p>5.2  启动jar包</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nohup java -jar sangeng-admin-<span class="number">1.0</span>-SNAPSHOT.jar &amp;</span><br><span class="line">nohup java -jar sangeng-blog-<span class="number">1.0</span>-SNAPSHOT.jar &amp;</span><br></pre></td></tr></table></figure>
+
+<p>使用nohup是在后台也会启动，就算服务器关闭了，也会运行，使用这个命令不会有什么输出，输出在server下的nohup.out文件中。</p>
+<h2 id="前端部署"><a href="#前端部署" class="headerlink" title="前端部署"></a>前端部署</h2><p>只需要修改与后端交互的地址</p>
+<h3 id="1-修改后台地址"><a href="#1-修改后台地址" class="headerlink" title="1.修改后台地址"></a>1.修改后台地址</h3><img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230414094854610.png" alt="image-20230414094854610" style="zoom:67%;" />
+
+<p>在修改.env.production和.env.development文件</p>
+<p><img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230414095107841.png" alt="image-20230414095107841" style="zoom:50%;" /><img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230414095122259.png" alt="image-20230414095122259" style="zoom:50%;" /></p>
+<p>如果不修改这两个文件，会报一个错误</p>
+<h3 id="2-修改前台地址"><a href="#2-修改前台地址" class="headerlink" title="2.修改前台地址"></a>2.修改前台地址</h3><img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230414095413989.png" alt="image-20230414095413989" style="zoom:50%;" />
+
+<p>当时我修改了这里，同时也修改了.env.production和.env.development文件，但是还是报错</p>
+<img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230414095525266.png" alt="image-20230414095525266" style="zoom:67%;" />
+
+<p>当时没注意看到请求地址还是localhost，这个问题困惑了几天，在csdn一通查找。</p>
+<p>就想，在js文件中有后端地址，突然想到上面引入了一个request文件</p>
+<img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230414104236146.png" alt="image-20230414104236146" style="zoom:50%;" />
+
+<p>找到了axios，发现这里的地址还没有改</p>
+<img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230414104337133.png" alt="image-20230414104337133" style="zoom:50%;" />
+
+<p>这样就好了。至此命令行部署就完成了。宝塔部署正在路上。</p>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/zhifubao.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -176,16 +491,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/04/13/%E5%89%8D%E5%90%8E%E7%AB%AF%E9%83%A8%E7%BD%B2/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2023/04/13/%E5%89%8D%E5%90%8E%E7%AB%AF%E9%83%A8%E7%BD%B2/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2023/03/30/%E5%89%8D%E5%90%8E%E7%AB%AF%E9%94%99%E8%AF%AF%E6%80%BB%E7%BB%93/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">前后端错误总结</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -200,627 +574,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-前后端错误总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/03/30/%E5%89%8D%E5%90%8E%E7%AB%AF%E9%94%99%E8%AF%AF%E6%80%BB%E7%BB%93/">前后端错误总结</a>
-    </h1>
-  
-
-        
-        <a href="/2023/03/30/%E5%89%8D%E5%90%8E%E7%AB%AF%E9%94%99%E8%AF%AF%E6%80%BB%E7%BB%93/" class="archive-article-date">
-  	<time datetime="2023-03-30T06:01:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <span id="more"></span>
-
-<h1 id="后端"><a href="#后端" class="headerlink" title="后端"></a>后端</h1><h1 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h1><h2 id="1-扩展程序异常"><a href="#1-扩展程序异常" class="headerlink" title="1. 扩展程序异常"></a>1. 扩展程序异常</h2><h2 id=""><a href="#" class="headerlink" title=""></a><img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230330140306261.png" alt="image-20230330140306261"></h2><p>​      DevTools 无法加载 SourceMap： 无法加载 chrome-extension://dhdgffkkebhmkfjojejmpbldmpobfkfo/jquery.min.map: 的内容HTTP 错误：状态代码 404，net::ERR_UNKNOWN_URL_SCHEME</p>
-<p>当出现无法加载chrome-extension时，就会想到这是在浏览器中装了很多扩展程序，对需要加载的资源有冲突，所以需要关闭扩展程序，或者换个浏览器即可解决。</p>
-<p><img src="https://mypicgoimgs.oss-cn-hangzhou.aliyuncs.com/img_for_typora/image-20230330140359732.png" alt="image-20230330140359732"></p>
-<p>换个浏览器即可正常访问。</p>
-<h3 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h3><p>总共耗时一个半小时，一直以为是前端资源有问题，没有到控制台查看报错信息。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/03/30/%E5%89%8D%E5%90%8E%E7%AB%AF%E9%94%99%E8%AF%AF%E6%80%BB%E7%BB%93/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E8%A1%8C%E9%83%A8%E7%BD%B2"><span class="toc-number">1.</span> <span class="toc-text">命令行部署</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-number">1.1.</span> <span class="toc-text">服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%98%BF%E9%87%8C%E4%BA%91"><span class="toc-number">1.1.1.</span> <span class="toc-text">阿里云</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E8%B4%AD%E4%B9%B0%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">1.购买服务器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5"><span class="toc-number">1.1.1.2.</span> <span class="toc-text">2.远程连接</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E5%BC%80%E6%94%BE%E7%AB%AF%E5%8F%A3"><span class="toc-number">1.1.1.3.</span> <span class="toc-text">3.开放端口</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="toc-number">1.2.</span> <span class="toc-text">环境搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-number">1.2.1.</span> <span class="toc-text">准备工作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-jdk%E5%AE%89%E8%A3%85"><span class="toc-number">1.2.2.</span> <span class="toc-text">1.jdk安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-mysql%E5%AE%89%E8%A3%85"><span class="toc-number">1.2.3.</span> <span class="toc-text">2.mysql安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-redis%E5%AE%89%E8%A3%85"><span class="toc-number">1.2.4.</span> <span class="toc-text">3.redis安装</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F"><span class="toc-number">1.2.4.1.</span> <span class="toc-text">注意</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-nginx%E5%AE%89%E8%A3%85"><span class="toc-number">1.2.5.</span> <span class="toc-text">4. nginx安装</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%8E%E7%AB%AF%E9%83%A8%E7%BD%B2"><span class="toc-number">1.3.</span> <span class="toc-text">后端部署</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE"><span class="toc-number">1.3.1.</span> <span class="toc-text">1.修改配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%B7%BB%E5%8A%A0pom"><span class="toc-number">1.3.2.</span> <span class="toc-text">2.添加pom</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%89%93%E5%8C%85"><span class="toc-number">1.3.3.</span> <span class="toc-text">3.打包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E7%94%9F%E6%88%90jar%E5%8C%85"><span class="toc-number">1.3.4.</span> <span class="toc-text">4.生成jar包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-jar%E5%8C%85%E4%B8%8A%E4%BC%A0%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-number">1.3.5.</span> <span class="toc-text">5.jar包上传到服务器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E7%AB%AF%E9%83%A8%E7%BD%B2"><span class="toc-number">1.4.</span> <span class="toc-text">前端部署</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%BF%AE%E6%94%B9%E5%90%8E%E5%8F%B0%E5%9C%B0%E5%9D%80"><span class="toc-number">1.4.1.</span> <span class="toc-text">1.修改后台地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%BF%AE%E6%94%B9%E5%89%8D%E5%8F%B0%E5%9C%B0%E5%9D%80"><span class="toc-number">1.4.2.</span> <span class="toc-text">2.修改前台地址</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
-  
-    <article id="post-AOP理解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/03/26/AOP%E7%90%86%E8%A7%A3/">AOP理解</a>
-    </h1>
-  
-
-        
-        <a href="/2023/03/26/AOP%E7%90%86%E8%A7%A3/" class="archive-article-date">
-  	<time datetime="2023-03-26T06:31:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1-AOP概念及相关术语"><a href="#1-AOP概念及相关术语" class="headerlink" title="1. AOP概念及相关术语"></a>1. AOP概念及相关术语</h2>
-        
-          <a class="article-more-a" href="/2023/03/26/AOP%E7%90%86%E8%A7%A3/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/03/26/AOP%E7%90%86%E8%A7%A3/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Java知识" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/10/19/Java%E7%9F%A5%E8%AF%86/">Java知识</a>
-    </h1>
-  
-
-        
-        <a href="/2022/10/19/Java%E7%9F%A5%E8%AF%86/" class="archive-article-date">
-  	<time datetime="2022-10-19T01:45:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-10-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="重载与重写的区别"><a href="#重载与重写的区别" class="headerlink" title="重载与重写的区别"></a>重载与重写的区别</h2><h3 id="重载"><a href="#重载" class="headerlink" title="重载"></a>重载</h3>
-        
-          <a class="article-more-a" href="/2022/10/19/Java%E7%9F%A5%E8%AF%86/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/10/19/Java%E7%9F%A5%E8%AF%86/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Spring-Cloud-Alibaba" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/08/20/Spring-Cloud-Alibaba/">springCloud Alibaba</a>
-    </h1>
-  
-
-        
-        <a href="/2022/08/20/Spring-Cloud-Alibaba/" class="archive-article-date">
-  	<time datetime="2022-08-20T11:22:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-08-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Nacos"><a href="#Nacos" class="headerlink" title="Nacos"></a>Nacos</h2>
-        
-          <a class="article-more-a" href="/2022/08/20/Spring-Cloud-Alibaba/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/08/20/Spring-Cloud-Alibaba/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-EasyExcel简单入手" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/08/11/EasyExcel%E7%AE%80%E5%8D%95%E5%85%A5%E6%89%8B/">EasyExcel简单入手</a>
-    </h1>
-  
-
-        
-        <a href="/2022/08/11/EasyExcel%E7%AE%80%E5%8D%95%E5%85%A5%E6%89%8B/" class="archive-article-date">
-  	<time datetime="2022-08-11T06:45:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-08-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h2>
-        
-          <a class="article-more-a" href="/2022/08/11/EasyExcel%E7%AE%80%E5%8D%95%E5%85%A5%E6%89%8B/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/08/11/EasyExcel%E7%AE%80%E5%8D%95%E5%85%A5%E6%89%8B/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-阿里云OSS" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/08/10/%E9%98%BF%E9%87%8C%E4%BA%91OSS/">阿里云OSS</a>
-    </h1>
-  
-
-        
-        <a href="/2022/08/10/%E9%98%BF%E9%87%8C%E4%BA%91OSS/" class="archive-article-date">
-  	<time datetime="2022-08-10T10:12:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-08-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <span id="more"></span>
-
-<h2 id="图片存储"><a href="#图片存储" class="headerlink" title="图片存储"></a>图片存储</h2><p>首先引入依赖</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">           &lt;groupId&gt;com.aliyun.oss&lt;/groupId&gt;</span><br><span class="line">           &lt;artifactId&gt;aliyun-sdk-oss&lt;/artifactId&gt;</span><br><span class="line">           &lt;version&gt;<span class="number">3.15</span><span class="number">.0</span>&lt;/version&gt;</span><br><span class="line">       &lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
-
-<h4 id="配置yml"><a href="#配置yml" class="headerlink" title="配置yml"></a>配置yml</h4><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 阿里云OSS配置</span></span><br><span class="line"><span class="attr">aliyun:</span></span><br><span class="line">  <span class="attr">oss:</span></span><br><span class="line">    <span class="attr">end-point:</span> <span class="string">Endpoint（地域节点）</span></span><br><span class="line">    <span class="attr">access-key-id:</span> <span class="string">access-key-id</span></span><br><span class="line">    <span class="attr">access-key-secret:</span> <span class="string">access-key-secret</span></span><br><span class="line">    <span class="attr">bucket-name:</span> <span class="string">bucket-name</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="读取配置"><a href="#读取配置" class="headerlink" title="读取配置"></a>读取配置</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@ConfigurationProperties(prefix = &quot;aliyun.oss&quot;)</span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">OSSConfig</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String endPoint;</span><br><span class="line">    <span class="keyword">private</span> String accessKeyId;</span><br><span class="line">    <span class="keyword">private</span> String accessKeySecret;</span><br><span class="line">    <span class="keyword">private</span> String bucketName;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="Controller"><a href="#Controller" class="headerlink" title="Controller"></a>Controller</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/upload&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FileUploadController</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> OssService ossService;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@PostMapping</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> ResponseResult <span class="title">uploadOssFile</span><span class="params">(MultipartFile file)</span></span>&#123;</span><br><span class="line">        <span class="comment">//获取上传文件 MultipartFile</span></span><br><span class="line">        <span class="comment">//返回上传到oss的路径</span></span><br><span class="line">        String url =ossService.uploadFileAvatar(file);</span><br><span class="line">        <span class="keyword">return</span> ResponseResult.okResult(url);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="service"><a href="#service" class="headerlink" title="service"></a>service</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">OssService</span> </span>&#123;</span><br><span class="line">    <span class="function">String <span class="title">uploadFileAvatar</span><span class="params">(MultipartFile file)</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h4 id="Impl"><a href="#Impl" class="headerlink" title="Impl"></a>Impl</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> com.aliyun.oss.OSS;</span><br><span class="line"><span class="keyword">import</span> com.aliyun.oss.OSSClientBuilder;</span><br><span class="line"><span class="keyword">import</span> com.atguigu.ggkt.vod.service.OssService;</span><br><span class="line"><span class="keyword">import</span> com.atguigu.ggkt.vod.util.ConstantPropertiesUtil;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Service;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.multipart.MultipartFile;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.InputStream;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">OssServiceImpl</span> <span class="keyword">implements</span> <span class="title">OssService</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> OSSConfig ossConfig;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">uploadFileAvatar</span><span class="params">(MultipartFile file)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//获取相关配置</span></span><br><span class="line">        String bucketName = ossConfig.getBucketName();</span><br><span class="line">        String endPoint = ossConfig.getEndPoint();</span><br><span class="line">        String accessKeyId = ossConfig.getAccessKeyId();</span><br><span class="line">        String accessKeySecret = ossConfig.getAccessKeySecret();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//创建OSS对象</span></span><br><span class="line">        OSS ossClient = <span class="keyword">new</span> OSSClientBuilder().build(endPoint, accessKeyId, accessKeySecret);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//获取原生文件名</span></span><br><span class="line">        String originalFilename = file.getOriginalFilename();</span><br><span class="line">        <span class="comment">//JDK8的日期格式</span></span><br><span class="line">        LocalDateTime time = LocalDateTime.now();</span><br><span class="line">        DateTimeFormatter dft = DateTimeFormatter.ofPattern(<span class="string">&quot;yyyy/MM/dd&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//拼装OSS上存储的路径</span></span><br><span class="line">        String folder = dft.format(time);</span><br><span class="line">        String fileName = generateUUID();</span><br><span class="line">        String extension = originalFilename.substring(originalFilename.lastIndexOf(<span class="string">&quot;.&quot;</span>));</span><br><span class="line"></span><br><span class="line">        <span class="comment">//在OSS上bucket下的文件名</span></span><br><span class="line">        String uploadFileName = <span class="string">&quot;user/&quot;</span> + folder + <span class="string">&quot;/&quot;</span> + fileName + extension;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            PutObjectResult result = ossClient.putObject(bucketName, uploadFileName, file.getInputStream());</span><br><span class="line">            <span class="comment">//拼装返回路径</span></span><br><span class="line">            <span class="keyword">if</span> (result != <span class="keyword">null</span>) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="string">&quot;https://&quot;</span>+bucketName+<span class="string">&quot;.&quot;</span>+endPoint+<span class="string">&quot;/&quot;</span>+uploadFileName;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            log.error(<span class="string">&quot;文件上传失败:&#123;&#125;&quot;</span>,e.getMessage());</span><br><span class="line">        &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">            <span class="comment">//OSS关闭服务，不然会造成OOM</span></span><br><span class="line">            ossClient.shutdown();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获取随机字符串</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> String <span class="title">generateUUID</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> UUID.randomUUID().toString().replaceAll(<span class="string">&quot;-&quot;</span>, <span class="string">&quot;&quot;</span>).substring(<span class="number">0</span>, <span class="number">32</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/08/10/%E9%98%BF%E9%87%8C%E4%BA%91OSS/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-后端开发" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/07/26/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/">后端开发</a>
-    </h1>
-  
-
-        
-        <a href="/2022/07/26/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/" class="archive-article-date">
-  	<time datetime="2022-07-26T10:10:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h2>
-        
-          <a class="article-more-a" href="/2022/07/26/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/07/26/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-前端(vue)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/09/30/%E5%89%8D%E7%AB%AF(vue)/">前端(Vue)</a>
-    </h1>
-  
-
-        
-        <a href="/2021/09/30/%E5%89%8D%E7%AB%AF(vue)/" class="archive-article-date">
-  	<time datetime="2021-09-30T11:28:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="Vue介绍"><a href="#Vue介绍" class="headerlink" title="Vue介绍"></a>Vue介绍</h3><p>官网:<a target="_blank" rel="noopener" href="https://cn.vuejs.org/">https://cn.vuejs.org</a></p>
-<p>Vue 的核心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。另一方面，当与现代化的工具链以及各种支持类库结合使用时，Vue 也完全能够为复杂的单页应用提供驱动</p>
-<h4 id="初始Vue-js"><a href="#初始Vue-js" class="headerlink" title="初始Vue.js"></a>初始Vue.js</h4>
-        
-          <a class="article-more-a" href="/2021/09/30/%E5%89%8D%E7%AB%AF(vue)/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/09/30/%E5%89%8D%E7%AB%AF(vue)/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-前端(ECMAScript 6)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/09/30/%E5%89%8D%E7%AB%AF(ECMAScript%206)/">前端(ECMAScript 6)</a>
-    </h1>
-  
-
-        
-        <a href="/2021/09/30/%E5%89%8D%E7%AB%AF(ECMAScript%206)/" class="archive-article-date">
-  	<time datetime="2021-09-30T10:55:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="ECMAScript-6简介"><a href="#ECMAScript-6简介" class="headerlink" title="ECMAScript 6简介"></a>ECMAScript 6简介</h4><p>官网：<a target="_blank" rel="noopener" href="http://es6.ruanyifeng.com/">http://es6.ruanyifeng.com/</a></p>
-<p>es6就是一种标准，js就是实现这种标准，es6就是接口，js实现接口</p>
-        
-          <a class="article-more-a" href="/2021/09/30/%E5%89%8D%E7%AB%AF(ECMAScript%206)/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/09/30/%E5%89%8D%E7%AB%AF(ECMAScript%206)/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -843,8 +622,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
