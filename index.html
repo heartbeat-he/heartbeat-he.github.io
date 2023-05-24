@@ -142,6 +142,88 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-辅导笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/05/08/%E8%BE%85%E5%AF%BC%E7%AC%94%E8%AE%B0/">辅导笔记</a>
+    </h1>
+  
+
+        
+        <a href="/2023/05/08/%E8%BE%85%E5%AF%BC%E7%AC%94%E8%AE%B0/" class="archive-article-date">
+  	<time datetime="2023-05-08T04:33:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="java核心"><a href="#java核心" class="headerlink" title="java核心"></a>java核心</h1><h3 id="ⅰ-Java中的四种访问修饰符是什么？它们分别有什么作用？"><a href="#ⅰ-Java中的四种访问修饰符是什么？它们分别有什么作用？" class="headerlink" title="ⅰ. Java中的四种访问修饰符是什么？它们分别有什么作用？"></a>ⅰ. Java中的四种访问修饰符是什么？它们分别有什么作用？</h3><p>public：公开的，访问权限最高，可以跨包访问。所以所有的包都能访问。<br>protect：受保护的，可以被本类、同一个包中的类、不同包中的子类所访问到。<br>default：默认的，只能被本类或者同一个包中的其他类访问到。<br>private：私有的，只能在本类中访问。<br>所以，为了保证安全性，一般把访问权限降到最低。</p>
+<h3 id="ⅱ-什么是Java中的多态性？它有哪些类型？请给出一个实例说明。"><a href="#ⅱ-什么是Java中的多态性？它有哪些类型？请给出一个实例说明。" class="headerlink" title="ⅱ. 什么是Java中的多态性？它有哪些类型？请给出一个实例说明。"></a>ⅱ. 什么是Java中的多态性？它有哪些类型？请给出一个实例说明。</h3><p>多态性是指对象可以根据所引用的类型表现出不同的行为。将父类对象应用到子类对象的特征。它允许以统一的方式处理不同类型的对象，通过方法的动态绑定，在运行时确定调用哪个具体实现。(编译看左，运行看右)</p>
+<p>多态性可以分为两种类型：编译时多态性（静态多态性）和运行时多态性（动态多态性）。</p>
+<ol>
+<li>编译时多态性（静态多态性）：<ul>
+<li>方法重载：在同一个类中，可以有多个具有相同名称但参数类型或个数不同的方法。编译器根据方法调用时提供的参数类型和个数，确定具体调用哪个方法。</li>
+</ul>
+</li>
+<li>运行时多态性（动态多态性）：<ul>
+<li>方法重写：子类可以覆盖（重写）父类的方法，使得通过父类引用指向子类对象时，根据实际对象类型的不同，调用的方法也不同。运行时多态性需要基于继承关系。</li>
+</ul>
+</li>
+</ol>
+<p>总结起来，编译时多态性是通过方法重载实现的，而运行时多态性则是通过方法重写和继承实现的。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">makeSound</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Animal is making a sound&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dog</span> <span class="keyword">extends</span> <span class="title">Animal</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">makeSound</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Dog is barking&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Cat</span> <span class="keyword">extends</span> <span class="title">Animal</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">makeSound</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Cat is meowing&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PolymorphismExample</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Animal animal1 = <span class="keyword">new</span> Dog();</span><br><span class="line">        Animal animal2 = <span class="keyword">new</span> Cat();</span><br><span class="line"></span><br><span class="line">        animal1.makeSound(); <span class="comment">// 输出：&quot;Dog is barking&quot;</span></span><br><span class="line">        animal2.makeSound(); <span class="comment">// 输出：&quot;Cat is meowing&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="ⅲ-什么是Java中的继承？它的优点和缺点是什么？"><a href="#ⅲ-什么是Java中的继承？它的优点和缺点是什么？" class="headerlink" title="ⅲ. 什么是Java中的继承？它的优点和缺点是什么？"></a>ⅲ. 什么是Java中的继承？它的优点和缺点是什么？</h3><h3 id="ⅳ-什么是Java中的抽象类？它的作用是什么？"><a href="#ⅳ-什么是Java中的抽象类？它的作用是什么？" class="headerlink" title="ⅳ. 什么是Java中的抽象类？它的作用是什么？"></a>ⅳ. 什么是Java中的抽象类？它的作用是什么？</h3><h3 id="ⅴ-什么是Java中的接口？它的作用是什么？与抽象类有什么区别？"><a href="#ⅴ-什么是Java中的接口？它的作用是什么？与抽象类有什么区别？" class="headerlink" title="ⅴ. 什么是Java中的接口？它的作用是什么？与抽象类有什么区别？"></a>ⅴ. 什么是Java中的接口？它的作用是什么？与抽象类有什么区别？</h3><h3 id="ⅵ-什么是Java中的异常处理？有哪些常见的异常类型？如何处理它们？"><a href="#ⅵ-什么是Java中的异常处理？有哪些常见的异常类型？如何处理它们？" class="headerlink" title="ⅵ. 什么是Java中的异常处理？有哪些常见的异常类型？如何处理它们？"></a>ⅵ. 什么是Java中的异常处理？有哪些常见的异常类型？如何处理它们？</h3><h3 id="ⅶ-什么是Java中的集合框架？它有哪些常见的实现类？它们之间有什么区别？（重点）"><a href="#ⅶ-什么是Java中的集合框架？它有哪些常见的实现类？它们之间有什么区别？（重点）" class="headerlink" title="ⅶ. 什么是Java中的集合框架？它有哪些常见的实现类？它们之间有什么区别？（重点）"></a>ⅶ. 什么是Java中的集合框架？它有哪些常见的实现类？它们之间有什么区别？（重点）</h3><h3 id="ⅷ-什么是Java中的JVM？它的作用是什么？它是如何工作的？（重点）"><a href="#ⅷ-什么是Java中的JVM？它的作用是什么？它是如何工作的？（重点）" class="headerlink" title="ⅷ. 什么是Java中的JVM？它的作用是什么？它是如何工作的？（重点）"></a>ⅷ. 什么是Java中的JVM？它的作用是什么？它是如何工作的？（重点）</h3><h3 id="ⅸ-什么是Java中的反射？它的作用是什么？如何使用反射机制？"><a href="#ⅸ-什么是Java中的反射？它的作用是什么？如何使用反射机制？" class="headerlink" title="ⅸ. 什么是Java中的反射？它的作用是什么？如何使用反射机制？"></a>ⅸ. 什么是Java中的反射？它的作用是什么？如何使用反射机制？</h3><h3 id="i-什么是Java中的IO？它的分类有哪些？请举例说明。"><a href="#i-什么是Java中的IO？它的分类有哪些？请举例说明。" class="headerlink" title="i  什么是Java中的IO？它的分类有哪些？请举例说明。"></a>i  什么是Java中的IO？它的分类有哪些？请举例说明。</h3><h3 id="ⅱ什么是Java中的NIO？与IO有何不同？请举例说明。"><a href="#ⅱ什么是Java中的NIO？与IO有何不同？请举例说明。" class="headerlink" title="ⅱ什么是Java中的NIO？与IO有何不同？请举例说明。"></a>ⅱ什么是Java中的NIO？与IO有何不同？请举例说明。</h3><h3 id="ⅲ什么是Java中的流？有哪些类型？它们之间有什么区别？"><a href="#ⅲ什么是Java中的流？有哪些类型？它们之间有什么区别？" class="headerlink" title="ⅲ什么是Java中的流？有哪些类型？它们之间有什么区别？"></a>ⅲ什么是Java中的流？有哪些类型？它们之间有什么区别？</h3><h3 id="ⅳ什么是Java中的序列化？它的作用是什么？如何实现序列化？"><a href="#ⅳ什么是Java中的序列化？它的作用是什么？如何实现序列化？" class="headerlink" title="ⅳ什么是Java中的序列化？它的作用是什么？如何实现序列化？"></a>ⅳ什么是Java中的序列化？它的作用是什么？如何实现序列化？</h3><h3 id="ⅴ什么是Java中的多线程？如何创建一个线程？有哪些线程状态？"><a href="#ⅴ什么是Java中的多线程？如何创建一个线程？有哪些线程状态？" class="headerlink" title="ⅴ什么是Java中的多线程？如何创建一个线程？有哪些线程状态？"></a>ⅴ什么是Java中的多线程？如何创建一个线程？有哪些线程状态？</h3><h3 id="ⅵ什么是Java中的线程池？如何创建一个线程池？它有哪些优点？"><a href="#ⅵ什么是Java中的线程池？如何创建一个线程池？它有哪些优点？" class="headerlink" title="ⅵ什么是Java中的线程池？如何创建一个线程池？它有哪些优点？"></a>ⅵ什么是Java中的线程池？如何创建一个线程池？它有哪些优点？</h3><h3 id="ⅶ什么是Java中的同步？为什么需要同步？有哪些实现方式？"><a href="#ⅶ什么是Java中的同步？为什么需要同步？有哪些实现方式？" class="headerlink" title="ⅶ什么是Java中的同步？为什么需要同步？有哪些实现方式？"></a>ⅶ什么是Java中的同步？为什么需要同步？有哪些实现方式？</h3><p>a并发编程：</p>
+<h3 id="ⅰ以下是一些可能会在-Java-并发编程面试中被问到的问题："><a href="#ⅰ以下是一些可能会在-Java-并发编程面试中被问到的问题：" class="headerlink" title="ⅰ以下是一些可能会在 Java 并发编程面试中被问到的问题："></a>ⅰ以下是一些可能会在 Java 并发编程面试中被问到的问题：</h3><h3 id="ⅱ什么是线程？线程和进程有什么区别？"><a href="#ⅱ什么是线程？线程和进程有什么区别？" class="headerlink" title="ⅱ什么是线程？线程和进程有什么区别？"></a>ⅱ什么是线程？线程和进程有什么区别？</h3><h3 id="ⅲJava-中有哪些方式可以创建线程？"><a href="#ⅲJava-中有哪些方式可以创建线程？" class="headerlink" title="ⅲJava 中有哪些方式可以创建线程？"></a>ⅲJava 中有哪些方式可以创建线程？</h3><h3 id="ⅳ什么是线程安全？如何保证线程安全？"><a href="#ⅳ什么是线程安全？如何保证线程安全？" class="headerlink" title="ⅳ什么是线程安全？如何保证线程安全？"></a>ⅳ什么是线程安全？如何保证线程安全？</h3><h3 id="ⅴ什么是-synchronized-关键字？它是如何工作的？"><a href="#ⅴ什么是-synchronized-关键字？它是如何工作的？" class="headerlink" title="ⅴ什么是 synchronized 关键字？它是如何工作的？"></a>ⅴ什么是 synchronized 关键字？它是如何工作的？</h3><h3 id="ⅵ什么是-volatile-关键字？它的作用是什么？"><a href="#ⅵ什么是-volatile-关键字？它的作用是什么？" class="headerlink" title="ⅵ什么是 volatile 关键字？它的作用是什么？"></a>ⅵ什么是 volatile 关键字？它的作用是什么？</h3><h3 id="ⅶ什么是死锁？如何避免死锁？"><a href="#ⅶ什么是死锁？如何避免死锁？" class="headerlink" title="ⅶ什么是死锁？如何避免死锁？"></a>ⅶ什么是死锁？如何避免死锁？</h3><h3 id="ⅷ什么是线程池？如何通过线程池来提高程序的性能？"><a href="#ⅷ什么是线程池？如何通过线程池来提高程序的性能？" class="headerlink" title="ⅷ什么是线程池？如何通过线程池来提高程序的性能？"></a>ⅷ什么是线程池？如何通过线程池来提高程序的性能？</h3><h3 id="ⅸJava-中的-wait-和-notify-方法是用来做什么的？"><a href="#ⅸJava-中的-wait-和-notify-方法是用来做什么的？" class="headerlink" title="ⅸJava 中的 wait() 和 notify() 方法是用来做什么的？"></a>ⅸJava 中的 wait() 和 notify() 方法是用来做什么的？</h3><h3 id="X什么是-Java-中的-ReentrantLock？它与-synchronized-的区别是什么？"><a href="#X什么是-Java-中的-ReentrantLock？它与-synchronized-的区别是什么？" class="headerlink" title="X什么是 Java 中的 ReentrantLock？它与 synchronized 的区别是什么？"></a>X什么是 Java 中的 ReentrantLock？它与 synchronized 的区别是什么？</h3><h3 id="Xⅰ什么是-AQS？它的作用是什么？"><a href="#Xⅰ什么是-AQS？它的作用是什么？" class="headerlink" title="Xⅰ什么是 AQS？它的作用是什么？"></a>Xⅰ什么是 AQS？它的作用是什么？</h3><h3 id="Xⅱ什么是-CountDownLatch-和-CyclicBarrier？它们分别有什么作用？"><a href="#Xⅱ什么是-CountDownLatch-和-CyclicBarrier？它们分别有什么作用？" class="headerlink" title="Xⅱ什么是 CountDownLatch 和 CyclicBarrier？它们分别有什么作用？"></a>Xⅱ什么是 CountDownLatch 和 CyclicBarrier？它们分别有什么作用？</h3><h3 id="Xⅲ什么是线程间的通信？Java-中如何实现线程间的通信？"><a href="#Xⅲ什么是线程间的通信？Java-中如何实现线程间的通信？" class="headerlink" title="Xⅲ什么是线程间的通信？Java 中如何实现线程间的通信？"></a>Xⅲ什么是线程间的通信？Java 中如何实现线程间的通信？</h3><h3 id="Xⅳ什么是线程的上下文切换？它会对程序的性能产生什么影响？"><a href="#Xⅳ什么是线程的上下文切换？它会对程序的性能产生什么影响？" class="headerlink" title="Xⅳ什么是线程的上下文切换？它会对程序的性能产生什么影响？"></a>Xⅳ什么是线程的上下文切换？它会对程序的性能产生什么影响？</h3><h3 id="Xⅴ什么是线程的优先级？如何设置线程的优先级？"><a href="#Xⅴ什么是线程的优先级？如何设置线程的优先级？" class="headerlink" title="Xⅴ什么是线程的优先级？如何设置线程的优先级？"></a>Xⅴ什么是线程的优先级？如何设置线程的优先级？</h3><h3 id="Xⅵ什么是线程的中断？如何实现线程的中断？"><a href="#Xⅵ什么是线程的中断？如何实现线程的中断？" class="headerlink" title="Xⅵ什么是线程的中断？如何实现线程的中断？"></a>Xⅵ什么是线程的中断？如何实现线程的中断？</h3><p>b数据库：</p>
+<h3 id="ⅰ什么是SQL？它有哪些基本命令？请举例说明。"><a href="#ⅰ什么是SQL？它有哪些基本命令？请举例说明。" class="headerlink" title="ⅰ什么是SQL？它有哪些基本命令？请举例说明。"></a>ⅰ什么是SQL？它有哪些基本命令？请举例说明。</h3><h3 id="ⅱ存储引擎？有哪些常见的存储引擎？它们之间有什么区别？"><a href="#ⅱ存储引擎？有哪些常见的存储引擎？它们之间有什么区别？" class="headerlink" title="ⅱ存储引擎？有哪些常见的存储引擎？它们之间有什么区别？"></a>ⅱ存储引擎？有哪些常见的存储引擎？它们之间有什么区别？</h3><h3 id="ⅲ索引？它有哪些优点和缺点？如何创建索引？"><a href="#ⅲ索引？它有哪些优点和缺点？如何创建索引？" class="headerlink" title="ⅲ索引？它有哪些优点和缺点？如何创建索引？"></a>ⅲ索引？它有哪些优点和缺点？如何创建索引？</h3><h3 id="ⅳ事务？传播行为、隔离级别？如何开启和结束一个事务？"><a href="#ⅳ事务？传播行为、隔离级别？如何开启和结束一个事务？" class="headerlink" title="ⅳ事务？传播行为、隔离级别？如何开启和结束一个事务？"></a>ⅳ事务？传播行为、隔离级别？如何开启和结束一个事务？</h3><h3 id="ⅴ视图？它的作用是什么？如何创建一个视图？"><a href="#ⅴ视图？它的作用是什么？如何创建一个视图？" class="headerlink" title="ⅴ视图？它的作用是什么？如何创建一个视图？"></a>ⅴ视图？它的作用是什么？如何创建一个视图？</h3><h3 id="ⅵ触发器？它的作用是什么？如何创建一个触发器？"><a href="#ⅵ触发器？它的作用是什么？如何创建一个触发器？" class="headerlink" title="ⅵ触发器？它的作用是什么？如何创建一个触发器？"></a>ⅵ触发器？它的作用是什么？如何创建一个触发器？</h3><h3 id="ⅶ什么是MySQL中的备份和恢复？有哪些备份和恢复方式？"><a href="#ⅶ什么是MySQL中的备份和恢复？有哪些备份和恢复方式？" class="headerlink" title="ⅶ什么是MySQL中的备份和恢复？有哪些备份和恢复方式？"></a>ⅶ什么是MySQL中的备份和恢复？有哪些备份和恢复方式？</h3><h3 id="ⅷ什么是MySQL中的复制？它的作用是什么？如何配置和使用MySQL复制？"><a href="#ⅷ什么是MySQL中的复制？它的作用是什么？如何配置和使用MySQL复制？" class="headerlink" title="ⅷ什么是MySQL中的复制？它的作用是什么？如何配置和使用MySQL复制？"></a>ⅷ什么是MySQL中的复制？它的作用是什么？如何配置和使用MySQL复制？</h3><h3 id="ⅸ什么是MySQL中的分区表？它的作用是什么？如何创建一个分区表？"><a href="#ⅸ什么是MySQL中的分区表？它的作用是什么？如何创建一个分区表？" class="headerlink" title="ⅸ什么是MySQL中的分区表？它的作用是什么？如何创建一个分区表？"></a>ⅸ什么是MySQL中的分区表？它的作用是什么？如何创建一个分区表？</h3>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2023/05/08/%E8%BE%85%E5%AF%BC%E7%AC%94%E8%AE%B0/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-前后端部署" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -700,72 +782,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2021/09/30/%E5%89%8D%E7%AB%AF(vue)/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-前端(ECMAScript 6)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/09/30/%E5%89%8D%E7%AB%AF(ECMAScript%206)/">前端(ECMAScript 6)</a>
-    </h1>
-  
-
-        
-        <a href="/2021/09/30/%E5%89%8D%E7%AB%AF(ECMAScript%206)/" class="archive-article-date">
-  	<time datetime="2021-09-30T10:55:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="ECMAScript-6简介"><a href="#ECMAScript-6简介" class="headerlink" title="ECMAScript 6简介"></a>ECMAScript 6简介</h4><p>官网：<a target="_blank" rel="noopener" href="http://es6.ruanyifeng.com/">http://es6.ruanyifeng.com/</a></p>
-<p>es6就是一种标准，js就是实现这种标准，es6就是接口，js实现接口</p>
-        
-          <a class="article-more-a" href="/2021/09/30/%E5%89%8D%E7%AB%AF(ECMAScript%206)/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/09/30/%E5%89%8D%E7%AB%AF(ECMAScript%206)/">展开全文 >></a>
         </p>
       
 
